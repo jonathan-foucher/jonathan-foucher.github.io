@@ -1,0 +1,6 @@
+# Vuejs
+node_modules/
+npm-debug.log
+
+# Visual Studio Code
+.vscode
