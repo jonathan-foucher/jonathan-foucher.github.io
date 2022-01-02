@@ -38,19 +38,19 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <Homepage/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Homepage from './components/Homepage';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Homepage,
   },
 
   data: () => ({
@@ -58,3 +58,11 @@ export default {
   }),
 };
 </script>
+
+<style>
+@font-face {
+  font-family: "Menlo";
+  src: local("Menlo"),
+   url(./fonts/Menlo/Menlo-Regular.ttf) format("truetype");
+}
+</style>
