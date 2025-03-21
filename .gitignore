@@ -1,6 +1,8 @@
-# Vuejs
+# vuejs
 node_modules/
+dist/
 npm-debug.log
 
-# Visual Studio Code
-.vscode
+# intellij
+/.idea/
+**.iml
