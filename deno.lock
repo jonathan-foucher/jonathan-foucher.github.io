@@ -5,6 +5,7 @@
     "npm:@quasar/vite-plugin@^1.9.0": "1.9.0_@vitejs+plugin-vue@5.2.3__vite@6.2.2__vue@3.5.13___typescript@5.7.3__typescript@5.7.3_quasar@2.18.1_vite@6.2.2_vue@3.5.13__typescript@5.7.3_vite@6.2.2__sass-embedded@1.86.0_sass-embedded@1.86.0_typescript@5.7.3",
     "npm:@vitejs/plugin-vue@^5.2.1": "5.2.3_vite@6.2.2_vue@3.5.13__typescript@5.7.3_typescript@5.7.3",
     "npm:@vue/tsconfig@0.7": "0.7.0_typescript@5.7.3_vue@3.5.13__typescript@5.7.3",
+    "npm:prettier@^3.5.3": "3.5.3",
     "npm:quasar@^2.18.1": "2.18.1",
     "npm:sass-embedded@^1.86.0": "1.86.0",
     "npm:typescript@~5.7.2": "5.7.3",
@@ -419,6 +420,9 @@
         "source-map-js"
       ]
     },
+    "prettier@3.5.3": {
+      "integrity": "sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw=="
+    },
     "quasar@2.18.1": {
       "integrity": "sha512-db/P64Mzpt1uXJ0MapaG+IYJQ9hHDb5KtTCoszwC78DR7sA+Uoj7nBW2EytwYykIExEmqavOvKrdasTvqhkgEg=="
     },
@@ -623,6 +627,7 @@
         "npm:@quasar/vite-plugin@^1.9.0",
         "npm:@vitejs/plugin-vue@^5.2.1",
         "npm:@vue/tsconfig@0.7",
+        "npm:prettier@^3.5.3",
         "npm:quasar@^2.18.1",
         "npm:sass-embedded@^1.86.0",
         "npm:typescript@~5.7.2",
