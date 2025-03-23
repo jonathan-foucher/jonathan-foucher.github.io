@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Computer from './components/Computer.vue'
+import Desktop from './components/Desktop.vue'
 </script>
 
 <template>
-  <Computer />
+  <Desktop />
 </template>
 
 <style>

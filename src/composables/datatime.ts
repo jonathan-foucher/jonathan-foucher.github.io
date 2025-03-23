@@ -8,6 +8,7 @@ export function useDateTime() {
     month: 'short',
     hour: '2-digit',
     minute: '2-digit',
+    second: '2-digit',
     timeZone: 'Europe/Paris',
   })
 
@@ -37,8 +38,9 @@ export function useDateTime() {
     const month = getDatePart(dateParts, 'month')
     const hour = getDatePart(dateParts, 'hour')
     const minute = getDatePart(dateParts, 'minute')
+    const second = getDatePart(dateParts, 'second')
 
-    return `${weekday} ${day} ${month} ${hour}:${minute}`
+    return `${weekday} ${day} ${month} ${hour}:${minute}:${second}`
   })
 
   return { formattedDateTime }
