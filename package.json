@@ -6,7 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky",
+    "lint-staged": "lint-staged",
+    "format": "prettier . --write"
+  },
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@quasar/extras": "^1.16.17",
@@ -19,6 +27,8 @@
     "@types/node": "^22.13.11",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
+    "lint-staged": "^15.5.0",
+    "husky": "^9.1.7",
     "sass-embedded": "^1.86.0",
     "typescript": "^5.8.2",
     "vite": "^6.2.2",

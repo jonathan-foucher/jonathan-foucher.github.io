@@ -13,7 +13,7 @@ jobs:
       - name: build app
         id: build
         run: |
-          yarn install
+          yarn
           yarn run build
       - name: upload static files as artifact
         id: deployment
