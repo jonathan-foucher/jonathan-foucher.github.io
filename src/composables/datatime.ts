@@ -1,16 +1,23 @@
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import type { ComputedRef } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useLocaleStore } from '@/stores/locale.ts'
 
 export function useDateTime() {
-  const dateTimeFormatter = Intl.DateTimeFormat('en-UK', {
-    weekday: 'short',
-    day: 'numeric',
-    month: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    timeZone: 'Europe/Paris',
-  })
+  const localeStore = useLocaleStore()
+  const { selectedLocale } = storeToRefs(localeStore)
+
+  const dateTimeFormatter = computed(() =>
+    Intl.DateTimeFormat(selectedLocale.value, {
+      weekday: 'short',
+      day: 'numeric',
+      month: 'short',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      timeZone: 'Europe/Paris',
+    })
+  )
 
   const dateTime = ref<Date>(new Date())
   const interval = ref<number | undefined>(undefined)
@@ -31,7 +38,7 @@ export function useDateTime() {
   ): string => dateParts.find((datePart) => datePart.type === type)?.value ?? ''
 
   const formattedDateTime: ComputedRef<string> = computed(() => {
-    const dateParts = dateTimeFormatter.formatToParts(dateTime.value)
+    const dateParts = dateTimeFormatter.value.formatToParts(dateTime.value)
 
     const weekday = getDatePart(dateParts, 'weekday')
     const day = getDatePart(dateParts, 'day')
