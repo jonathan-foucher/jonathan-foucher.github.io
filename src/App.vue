@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Desktop from './components/Desktop.vue'
+import Desktop from '@/components/Desktop.vue'
 </script>
 
 <template>
@@ -11,6 +11,6 @@ import Desktop from './components/Desktop.vue'
   font-family: 'Menlo';
   src:
     local('Menlo'),
-    url(./assets/fonts/Menlo-Regular.ttf) format('truetype');
+    url(@/assets/fonts/Menlo-Regular.ttf) format('truetype');
 }
 </style>
