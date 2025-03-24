@@ -5,13 +5,12 @@ const { formattedDateTime } = useDateTime()
 </script>
 
 <template>
-  <div class="date-time">| {{ formattedDateTime }}</div>
+  <div class="date-time cursor-default">| {{ formattedDateTime }}</div>
 </template>
 
 <style scoped>
 .date-time {
   font-family: 'Menlo', monospace;
-  cursor: default;
   font-size: small !important;
 }
 </style>
