@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
 <template>
-  <div class="cursor-pointer gt-md">Help</div>
+  <div class="cursor-pointer gt-md">{{ t('global.help') }}</div>
 </template>

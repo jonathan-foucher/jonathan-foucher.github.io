@@ -1,0 +1,14 @@
+{
+  "en-GB": {
+    "global.help": "Help",
+    "global.volume": "Volume"
+  },
+  "fr-FR": {
+    "global.help": "Aide",
+    "global.volume": "Volume"
+  },
+  "es-ES": {
+    "global.help": "Ayuda",
+    "global.volume": "Volumen"
+  }
+}
