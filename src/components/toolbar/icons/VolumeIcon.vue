@@ -2,6 +2,9 @@
 import { ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useVolumeStore } from '@/stores/volume.ts'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const volumeStore = useVolumeStore()
 const { disabledAudio, selectedVolume, volumeIcon } = storeToRefs(volumeStore)
@@ -19,7 +22,7 @@ const sliderValue = ref<number>(selectedVolume.value)
   >
     <q-menu fit class="disable-select">
       <q-card class="volume-card q-px-sm q-pb-md bg-grey-2">
-        <q-item-label header>Volume</q-item-label>
+        <q-item-label header>{{ t('global.volume') }}</q-item-label>
         <q-item dense>
           <q-item-section avatar>
             <q-btn

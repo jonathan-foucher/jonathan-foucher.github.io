@@ -14,10 +14,10 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
     <help-menu />
     <q-space />
 
-    <wifi-icon />
-    <battery-icon />
     <language-icon />
+    <wifi-icon />
     <volume-icon />
+    <battery-icon />
     <toolbar-date-time />
   </q-bar>
 </template>
