@@ -23,4 +23,11 @@ body {
   height: 100%;
   overflow: auto;
 }
+
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 </style>
