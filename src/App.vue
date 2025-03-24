@@ -13,4 +13,14 @@ import DesktopScreen from '@/components/DesktopScreen.vue'
     local('Menlo'),
     url(@/assets/fonts/Menlo-Regular.ttf) format('truetype');
 }
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
 </style>
