@@ -13,9 +13,10 @@ const { LOCALES, updateSelectedLocale, getFlagClassFromLocale } = localeStore
     <q-menu fit class="bg-grey-4">
       <q-list>
         <q-item
-          dense
-          class="q-pa-xs"
           v-for="locale in LOCALES"
+          :key="locale"
+          class="q-pa-xs"
+          dense
           clickable
           v-close-popup
           @click="updateSelectedLocale(locale)"

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Desktop from '@/components/Desktop.vue'
+import DesktopScreen from '@/components/DesktopScreen.vue'
 </script>
 
 <template>
-  <Desktop />
+  <desktop-screen />
 </template>
 
 <style>
