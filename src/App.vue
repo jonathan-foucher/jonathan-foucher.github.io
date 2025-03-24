@@ -24,6 +24,10 @@ body {
   overflow: auto;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
 .disable-select {
   -webkit-user-select: none;
   -moz-user-select: none;

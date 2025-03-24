@@ -10,12 +10,16 @@ const { LOCALES, updateSelectedLocale, getFlagClassFromLocale } = localeStore
 <template>
   <q-btn dense flat class="q-icon">
     <span class="flag" :class="getFlagClassFromLocale(selectedLocale)" />
-    <q-menu fit class="bg-grey-2">
+    <q-menu
+      class="disable-select bg-grey-2"
+      anchor="bottom middle"
+      self="top middle"
+    >
       <q-list>
         <q-item
           v-for="locale in LOCALES"
           :key="locale"
-          class="q-pa-xs"
+          class="q-px-sm"
           dense
           clickable
           v-close-popup
