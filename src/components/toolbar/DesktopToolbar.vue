@@ -11,6 +11,7 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
 <template>
   <q-bar class="bg-black text-white disable-select">
     <main-menu />
+    <q-separator vertical inset color="white" class="q-mx-sm" />
     <help-menu />
     <q-space />
 
@@ -18,6 +19,7 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
     <wifi-icon />
     <volume-icon />
     <battery-icon />
+    <q-separator vertical inset color="white" class="q-mx-xs" />
     <toolbar-date-time />
   </q-bar>
 </template>

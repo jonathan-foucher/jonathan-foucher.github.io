@@ -1,11 +1,13 @@
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import type { ComputedRef } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useLocaleStore } from '@/stores/locale.ts'
 
 export function useDateTime() {
   const localeStore = useLocaleStore()
   const { selectedLocale } = storeToRefs(localeStore)
+
+  const timeZone = 'Europe/Paris'
 
   const dateTimeFormatter = computed(() =>
     Intl.DateTimeFormat(selectedLocale.value, {
@@ -15,7 +17,7 @@ export function useDateTime() {
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
-      timeZone: 'Europe/Paris',
+      timeZone,
     })
   )
 
@@ -48,5 +50,13 @@ export function useDateTime() {
     return `${weekday} ${day} ${month} ${hour}:${minute}:${second}`
   })
 
-  return { formattedDateTime }
+  const getCurrentTimeZoneOffset = (): string => {
+    return new Date()
+      .toLocaleString('en', { timeZone, timeZoneName: 'longOffset' })
+      .split(' ')
+      .reverse()[0]
+      .replace('GMT', 'UTC')
+  }
+
+  return { timeZone, formattedDateTime, getCurrentTimeZoneOffset }
 }

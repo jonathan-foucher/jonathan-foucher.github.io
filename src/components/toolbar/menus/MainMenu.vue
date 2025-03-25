@@ -1,3 +1,3 @@
 <template>
-  <q-btn dense flat icon="list" />
+  <q-btn dense flat icon="menu" />
 </template>
