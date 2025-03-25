@@ -32,10 +32,8 @@ export function useDateTime() {
     clearInterval(interval.value)
   })
 
-  const getDatePart = (
-    dateParts: Array<Intl.DateTimeFormatPart>,
-    type: string
-  ): string => dateParts.find((datePart) => datePart.type === type)?.value ?? ''
+  const getDatePart = (dateParts: Array<Intl.DateTimeFormatPart>, type: string): string =>
+    dateParts.find((datePart) => datePart.type === type)?.value ?? ''
 
   const formattedDateTime: ComputedRef<string> = computed(() => {
     const dateParts = dateTimeFormatter.value.formatToParts(dateTime.value)
