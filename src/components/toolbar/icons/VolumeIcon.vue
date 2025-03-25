@@ -20,9 +20,9 @@ const sliderValue = ref<number>(selectedVolume.value)
     :icon="volumeIcon"
     :color="disabledAudio ? 'grey' : 'primary'"
   >
-    <q-menu fit class="disable-select">
+    <q-menu fit class="disable-select cursor-default">
       <q-card class="volume-card q-px-sm q-pb-md bg-grey-2">
-        <q-item-label header class="cursor-default">
+        <q-item-label header class="text-black text-weight-bold">
           {{ t('global.volume') }}
         </q-item-label>
         <q-item dense>
