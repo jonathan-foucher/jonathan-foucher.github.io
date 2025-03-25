@@ -8,11 +8,11 @@ const { t } = useI18n()
   <q-btn dense flat icon="battery_charging_full" color="positive">
     <q-menu class="disable-select cursor-default">
       <q-card class="q-pa-sm bg-grey-2">
-        <q-item dense class="text-blue">
+        <q-item dense class="text-blue text-weight-bold">
           {{ t('battery-icon.battery') }}
         </q-item>
         <q-separator />
-        <q-item dense>
+        <q-item dense class="q-py-sm">
           <div>
             {{ t('battery-icon.fully-charged') }}
             <q-icon name="bolt" />
