@@ -1,25 +1,17 @@
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 
-const DISABLED_AUDIO_LOCAL_STORAGE_KEY: string = 'audio-disabled'
-const VOLUME_LOCAL_STORAGE_KEY: string = 'selected-volume'
+const AUDIO_DISABLED_LOCAL_STORAGE_KEY: string = 'audio-disabled'
+const VOLUME_VALUE_LOCAL_STORAGE_KEY: string = 'volume-value'
 const DEFAULT_VOLUME_VALUE: number = 0.8
 
 export const useVolumeStore = defineStore('volume', () => {
-  const getInitialDisabledAudioValue = (): boolean => {
-    const localStorageValue: string | null = localStorage.getItem(
-      DISABLED_AUDIO_LOCAL_STORAGE_KEY
-    )
-    return (
-      localStorageValue !== null &&
-      localStorageValue.toLocaleLowerCase() === 'true'
-    )
+  const getInitialAudioDisabledValue = (): boolean => {
+    const localStorageValue: string | null = localStorage.getItem(AUDIO_DISABLED_LOCAL_STORAGE_KEY)
+    return localStorageValue?.toLocaleLowerCase() === 'true'
   }
 
-  const checkVolumeValue = (
-    value: number,
-    throwError: boolean = true
-  ): number => {
+  const checkVolumeValue = (value: number, throwError: boolean = true): number => {
     if (value < 0 || value > 1) {
       if (throwError) {
         throw new Error(`Wrong volume value: ${value}`)
@@ -30,52 +22,44 @@ export const useVolumeStore = defineStore('volume', () => {
   }
 
   const getInitialVolumeValue = (): number => {
-    return checkVolumeValue(
-      Number(
-        localStorage.getItem(VOLUME_LOCAL_STORAGE_KEY) ?? DEFAULT_VOLUME_VALUE
-      ),
-      false
-    )
+    return checkVolumeValue(Number(localStorage.getItem(VOLUME_VALUE_LOCAL_STORAGE_KEY) ?? DEFAULT_VOLUME_VALUE), false)
   }
 
-  const selectedVolume = ref<number>(getInitialVolumeValue())
-  const disabledAudio = ref<boolean>(getInitialDisabledAudioValue())
+  const volumeValue = ref<number>(getInitialVolumeValue())
+  const audioDisabled = ref<boolean>(getInitialAudioDisabledValue())
 
   const volumeIcon = computed<string>(() => {
-    if (disabledAudio.value) {
+    if (audioDisabled.value) {
       return 'volume_off'
     }
-    if (selectedVolume.value === 0.0) {
+    if (volumeValue.value === 0.0) {
       return 'volume_mute'
     }
-    if (selectedVolume.value < 0.5) {
+    if (volumeValue.value < 0.5) {
       return 'volume_down'
     }
     return 'volume_up'
   })
 
-  const toggleDisabledAudio = (): void => {
-    localStorage.setItem(
-      DISABLED_AUDIO_LOCAL_STORAGE_KEY,
-      String(!disabledAudio.value)
-    )
-    disabledAudio.value = !disabledAudio.value
-  }
+  const toggleDisabledAudio = () => (audioDisabled.value = !audioDisabled.value)
 
-  const updateSelectedVolume = (newValue: number): void => {
-    if (disabledAudio.value) {
-      toggleDisabledAudio()
+  watch(audioDisabled, (newValue) => {
+    localStorage.setItem(AUDIO_DISABLED_LOCAL_STORAGE_KEY, String(newValue))
+  })
+
+  watch(volumeValue, (newValue) => {
+    if (audioDisabled.value) {
+      audioDisabled.value = false
     }
     checkVolumeValue(newValue)
-    localStorage.setItem(VOLUME_LOCAL_STORAGE_KEY, newValue.toFixed(2))
-    selectedVolume.value = newValue
-  }
+    localStorage.setItem(VOLUME_VALUE_LOCAL_STORAGE_KEY, newValue.toFixed(2))
+    volumeValue.value = newValue
+  })
 
   return {
-    disabledAudio,
-    selectedVolume,
+    audioDisabled,
+    volumeValue,
     volumeIcon,
     toggleDisabledAudio,
-    updateSelectedVolume,
   }
 })
