@@ -7,11 +7,13 @@ const ROUTER_NAME = 'jf‑rtr‑x01'
 const { t } = useI18n()
 
 const wifiStore = useWifiStore()
-const { wifiEnabled } = storeToRefs(wifiStore)
+const { wifiEnabled, wifiLoading } = storeToRefs(wifiStore)
 </script>
 
 <template>
-  <q-btn dense flat :icon="wifiEnabled ? 'wifi' : 'wifi_off'">
+  <q-btn dense flat>
+    <q-spinner-radio v-if="wifiLoading" color="warning" size="0.8em" />
+    <q-icon v-else :name="wifiEnabled ? 'wifi' : 'wifi_off'" />
     <q-menu fit class="disable-select cursor-default">
       <q-card class="wifi-card q-pa-sm bg-grey-2">
         <q-item dense class="text-blue text-weight-bold">
@@ -29,9 +31,15 @@ const { wifiEnabled } = storeToRefs(wifiStore)
           <q-item-section avatar>
             <q-icon dense :name="wifiEnabled ? 'router' : 'wifi_off'" :color="wifiEnabled ? 'black' : 'negative'" />
           </q-item-section>
-          <i18n-t v-if="wifiEnabled" keypath="wifi-icon.connected-to-router" tag="span">
+          <i18n-t
+            v-if="wifiEnabled"
+            :keypath="wifiLoading ? 'wifi-icon.connecting-to-router' : 'wifi-icon.connected-to-router'"
+            tag="span"
+          >
             <template v-slot:router_name>
-              <span class="router-name">{{ ROUTER_NAME }}</span>
+              <span :class="wifiLoading ? 'router-name-connecting' : 'router-name-connected'">
+                {{ ROUTER_NAME }}
+              </span>
             </template>
           </i18n-t>
           <span v-else class="justify-center align-center text-center">{{ t('wifi-icon.wifi-off') }}</span>
@@ -44,7 +52,12 @@ const { wifiEnabled } = storeToRefs(wifiStore)
 <style scoped lang="scss">
 @import '@/quasar-variables.sass';
 
-.router-name {
+.router-name-connecting {
+  color: $warning;
+  font-weight: bold;
+}
+
+.router-name-connected {
   color: $positive;
   font-weight: bold;
 }
