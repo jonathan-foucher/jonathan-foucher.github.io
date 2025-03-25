@@ -1,13 +1,22 @@
 {
   "en-GB": {
+    "battery-icon.battery": "Battery",
+    "battery-icon.fully-charged": "Fully charged",
+    "battery-icon.plugged-in": "Plugged in",
     "global.help": "Help",
     "global.volume": "Volume"
   },
   "fr-FR": {
+    "battery-icon.battery": "Batterie",
+    "battery-icon.fully-charged": "Chargée complétement",
+    "battery-icon.plugged-in": "Branché",
     "global.help": "Aide",
     "global.volume": "Volume"
   },
   "es-ES": {
+    "battery-icon.battery": "Batería",
+    "battery-icon.fully-charged": "Completamente cargada",
+    "battery-icon.plugged-in": "Enchufada",
     "global.help": "Ayuda",
     "global.volume": "Volumen"
   }
