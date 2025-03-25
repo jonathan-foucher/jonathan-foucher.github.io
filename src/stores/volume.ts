@@ -10,9 +10,9 @@ export const useVolumeStore = defineStore('volume', () => {
     const localStorageValue: string | null = localStorage.getItem(
       DISABLED_AUDIO_LOCAL_STORAGE_KEY
     )
-    return !(
-      localStorageValue === null ||
-      localStorageValue.toLocaleLowerCase() === 'false'
+    return (
+      localStorageValue !== null &&
+      localStorageValue.toLocaleLowerCase() === 'true'
     )
   }
 
