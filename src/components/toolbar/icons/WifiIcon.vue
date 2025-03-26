@@ -31,17 +31,29 @@ const { wifiEnabled, wifiLoading } = storeToRefs(wifiStore)
           <q-item-section avatar>
             <q-icon dense :name="wifiEnabled ? 'router' : 'wifi_off'" :color="wifiEnabled ? 'black' : 'negative'" />
           </q-item-section>
-          <i18n-t
-            v-if="wifiEnabled"
-            :keypath="wifiLoading ? 'wifi-icon.connecting-to-router' : 'wifi-icon.connected-to-router'"
-            tag="span"
-          >
-            <template v-slot:router_name>
-              <span :class="wifiLoading ? 'router-name-connecting' : 'router-name-connected'">
-                {{ ROUTER_NAME }}
-              </span>
-            </template>
-          </i18n-t>
+
+          <div v-if="wifiLoading">
+            <i18n-t keypath="wifi-icon.connecting-to-router" tag="span">
+              <template v-slot:router_name>
+                <span class="router-name-connecting">
+                  {{ ROUTER_NAME }}
+                </span>
+              </template>
+            </i18n-t>
+            <q-spinner-ios class="q-mx-sm" color="warning" size="1.3em" />
+          </div>
+
+          <div v-else-if="wifiEnabled">
+            <i18n-t keypath="wifi-icon.connected-to-router" tag="span">
+              <template v-slot:router_name>
+                <span class="router-name-connected">
+                  {{ ROUTER_NAME }}
+                </span>
+              </template>
+            </i18n-t>
+            <q-icon name="check" class="q-mx-sm" color="positive" size="1.3em" />
+          </div>
+
           <span v-else class="justify-center align-center text-center">{{ t('wifi-icon.wifi-off') }}</span>
         </q-item>
       </q-card>
