@@ -9,7 +9,7 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
 </script>
 
 <template>
-  <q-bar class="bg-black text-white disable-select">
+  <q-bar class="desktop-bar bg-black text-white disable-select">
     <main-menu />
     <q-separator vertical inset color="white" class="q-mx-sm" />
     <help-menu />
@@ -23,3 +23,9 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
     <toolbar-date-time />
   </q-bar>
 </template>
+
+<style scoped>
+.desktop-bar {
+  height: 40px;
+}
+</style>

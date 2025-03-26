@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import DesktopToolbar from '@/components/toolbar/DesktopToolbar.vue'
-</script>
+<script setup lang="ts"></script>
 
-<template>
-  <desktop-toolbar />
-</template>
+<template>desktop</template>
