@@ -1,5 +1,4 @@
-import type { ComputedRef } from 'vue'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, type ComputedRef, onBeforeUnmount, onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useLocaleStore } from '@/stores/locale.ts'
 
