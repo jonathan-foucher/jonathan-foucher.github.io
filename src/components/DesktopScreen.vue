@@ -8,8 +8,25 @@ const openedApps = ref<Array<Application>>([{ name: 'some-app' }, { name: 'some-
 const closeApp = (name: string) => {
   openedApps.value = openedApps.value.filter((app) => app.name !== name)
 }
+
+const focusApp = (name: string) => {
+  const foundApp = openedApps.value.find((app) => app.name === name)
+  if (foundApp) {
+    openedApps.value = [...openedApps.value.filter((app) => app.name !== name), foundApp]
+  }
+}
+
+const isAppFocused = (name: string) =>
+  openedApps.value.length > 0 && openedApps.value[openedApps.value.length - 1].name === name
 </script>
 
 <template>
-  <app-window v-for="app in openedApps" :key="app.name" :name="app.name" :close-app="closeApp" />
+  <app-window
+    v-for="app in openedApps"
+    :key="app.name"
+    :name="app.name"
+    :close-app="closeApp"
+    :focus-app="focusApp"
+    :is-app-focused="isAppFocused"
+  />
 </template>

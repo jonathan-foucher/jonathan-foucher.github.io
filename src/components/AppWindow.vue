@@ -2,12 +2,20 @@
 import { ref } from 'vue'
 import { QPageContainer, type TouchPanValue } from 'quasar'
 
-const { name, closeApp } = defineProps({
+const { name, closeApp, focusApp, isAppFocused } = defineProps({
   name: {
     type: String,
     required: true,
   },
   closeApp: {
+    type: Function,
+    required: true,
+  },
+  focusApp: {
+    type: Function,
+    required: true,
+  },
+  isAppFocused: {
     type: Function,
     required: true,
   },
@@ -30,6 +38,7 @@ const getNewPositionValue = (currentValue: number, delta: number, min: number, m
 }
 
 const moveWindow: TouchPanValue = (event) => {
+  focusApp(name)
   draggingWindow.value = !event.isFirst && !event.isFinal
 
   windowPosition.value = [
@@ -53,8 +62,13 @@ const moveWindow: TouchPanValue = (event) => {
   <q-layout class="disable-select cursor-default">
     <q-page-container>
       <q-slide-transition appear :duration="300">
-        <q-page-sticky ref="windowRef" position="top-left" :offset="windowPosition">
-          <q-bar dark class="bg-primary text-white" v-touch-pan.prevent.mouse="moveWindow">
+        <q-page-sticky ref="windowRef" position="top-left" :offset="windowPosition" @click="focusApp(name)">
+          <q-bar
+            dark
+            :class="isAppFocused(name) ? 'bg-primary' : 'bg-grey-5'"
+            class="text-white"
+            v-touch-pan.prevent.mouse="moveWindow"
+          >
             <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(name)" />
             <q-icon name="lens" size="14.5px" color="grey" />
             <q-btn dense flat round icon="lens" size="8.5px" color="green" />
