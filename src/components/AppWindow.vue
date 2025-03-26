@@ -2,6 +2,17 @@
 import { ref } from 'vue'
 import { QPageContainer, type TouchPanValue } from 'quasar'
 
+const { name, closeApp } = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+  closeApp: {
+    type: Function,
+    required: true,
+  },
+})
+
 const APP_TOOLBAR_SIZE_PX = 40
 const windowPosition = ref([10, APP_TOOLBAR_SIZE_PX + 10])
 const draggingWindow = ref(false)
@@ -44,12 +55,15 @@ const moveWindow: TouchPanValue = (event) => {
       <q-slide-transition appear :duration="300">
         <q-page-sticky ref="windowRef" position="top-left" :offset="windowPosition">
           <q-bar dark class="bg-primary text-white" v-touch-pan.prevent.mouse="moveWindow">
-            <q-btn dense flat round icon="lens" size="8.5px" color="red" />
-            <q-btn dense flat round icon="lens" size="8.5px" color="yellow" />
+            <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(name)" />
+            <q-icon name="lens" size="14.5px" color="grey" />
             <q-btn dense flat round icon="lens" size="8.5px" color="green" />
-            <div class="app-title col text-center text-weight-bold">My-App</div>
+
+            <div class="app-title col text-center text-weight-bold">{{ name }}</div>
           </q-bar>
-          <q-btn unelevated color="red" icon="add" />
+          <q-card class="q-pa-sm bg-grey-2">
+            <q-item dense class="text-blue text-weight-bold"> aaaaaaaaa </q-item>
+          </q-card>
         </q-page-sticky>
       </q-slide-transition>
     </q-page-container>
