@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import DesktopScreen from '@/components/DesktopScreen.vue'
+import DesktopToolbar from '@/components/toolbar/DesktopToolbar.vue'
 </script>
 
 <template>
+  <desktop-toolbar />
   <desktop-screen />
 </template>
 
