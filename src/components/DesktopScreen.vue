@@ -1,3 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppWindow from '@/components/AppWindow.vue'
+</script>
 
-<template>desktop</template>
+<template>
+  <app-window />
+</template>
