@@ -6,7 +6,7 @@ import { QPageContainer } from 'quasar'
 
 <template>
   <q-layout class="disable-select cursor-default">
-    <q-page-container class="desktop">
+    <q-page-container>
       <desktop-toolbar />
       <desktop-screen />
     </q-page-container>

@@ -1,26 +1,21 @@
 <script setup lang="ts">
 import { type PropType, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useApplicationStore } from '@/stores/application.ts'
 import { QPageContainer, type TouchPanValue } from 'quasar'
 import type Application from '@/types/Application.ts'
 
-const { application, closeApp, focusApp, isAppFocused } = defineProps({
+const { t } = useI18n()
+
+const { application } = defineProps({
   application: {
     type: Object as PropType<Application>,
     required: true,
   },
-  closeApp: {
-    type: Function,
-    required: true,
-  },
-  focusApp: {
-    type: Function,
-    required: true,
-  },
-  isAppFocused: {
-    type: Function,
-    required: true,
-  },
 })
+
+const applicationStore = useApplicationStore()
+const { closeApp, focusApp, isAppFocused } = applicationStore
 
 const APP_TOOLBAR_SIZE_PX = 40
 const windowPosition = ref([10, APP_TOOLBAR_SIZE_PX + 10])
@@ -86,7 +81,7 @@ const moveWindow: TouchPanValue = (event) => {
           <q-icon name="lens" size="14.5px" color="grey" />
           <q-btn dense flat round icon="lens" size="8.5px" color="green" @click="isFullSize = !isFullSize" />
 
-          <div class="app-title col text-center text-weight-bold">{{ application.name }}</div>
+          <div class="app-title col text-center text-weight-bold">{{ t(application.name) }}</div>
         </q-bar>
         <div class="app-div">
           <component :is="application.component" />

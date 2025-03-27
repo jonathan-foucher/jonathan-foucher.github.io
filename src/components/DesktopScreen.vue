@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { shallowRef } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { storeToRefs } from 'pinia'
+import { useApplicationStore } from '@/stores/application.ts'
 import AppWindow from '@/components/AppWindow.vue'
-import type Application from '@/types/Application.ts'
 import { useRedirection } from '@/composables/redirection.ts'
 import DesktopIcon from '@/components/DesktopIcon.vue'
 import type DesktopIconType from '@/types/DesktopIcon.ts'
-import AboutProjectApp from '@/components/apps/AboutProjectApp.vue'
 
-const { t } = useI18n()
+const applicationStore = useApplicationStore()
+const { openedApps } = storeToRefs(applicationStore)
+
 const { GITHUB_PROFILE_URL, ROOT_ME_PROFILE_URL, LINKED_IN_PROFILE_URL, openInNewTab } = useRedirection()
 
 const desktopIcons: Array<Array<DesktopIconType>> = [
@@ -37,29 +37,6 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
 ]
 
 const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '-')
-
-const openedApps = shallowRef<Array<Application>>([
-  {
-    name: t('about-project.app-title'),
-    component: AboutProjectApp,
-    width: '400px',
-    height: 'auto',
-  },
-])
-
-const closeApp = (name: string) => {
-  openedApps.value = openedApps.value.filter((app) => app.name !== name)
-}
-
-const focusApp = (name: string) => {
-  const foundApp = openedApps.value.find((app) => app.name === name)
-  if (foundApp) {
-    openedApps.value = [...openedApps.value.filter((app) => app.name !== name), foundApp]
-  }
-}
-
-const isAppFocused = (name: string) =>
-  openedApps.value.length > 0 && openedApps.value[openedApps.value.length - 1].name === name
 </script>
 
 <template>
@@ -76,12 +53,5 @@ const isAppFocused = (name: string) =>
       />
     </div>
   </div>
-  <app-window
-    v-for="app in openedApps"
-    :key="getKeyFromText(app.name)"
-    :application="app"
-    :close-app="closeApp"
-    :focus-app="focusApp"
-    :is-app-focused="isAppFocused"
-  />
+  <app-window v-for="app in openedApps" :key="getKeyFromText(app.name)" :application="app" />
 </template>
