@@ -9,7 +9,7 @@ const { LOCALES, updateSelectedLocale, getFlagClassFromLocale } = localeStore
 
 <template>
   <q-btn dense flat class="q-icon">
-    <span class="flag" :class="getFlagClassFromLocale(selectedLocale)" />
+    <span class="selected-flag" :class="getFlagClassFromLocale(selectedLocale)" />
     <q-menu class="disable-select bg-grey-2" anchor="bottom middle" self="top middle">
       <q-list>
         <q-item
@@ -29,7 +29,11 @@ const { LOCALES, updateSelectedLocale, getFlagClassFromLocale } = localeStore
 </template>
 
 <style scoped>
-.flag {
+.selected-flag {
   font-size: 14px;
+}
+
+.flag {
+  font-size: 20px;
 }
 </style>
