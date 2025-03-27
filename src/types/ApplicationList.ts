@@ -4,7 +4,7 @@ export class ApplicationList {
   static readonly ABOUT_PROJECT = {
     name: 'about-project.app-title',
     component: AboutProjectApp,
-    width: '400px',
-    height: 'auto',
+    width: 400,
+    height: 380,
   }
 }

@@ -61,7 +61,7 @@ const techStacks: Array<TechStack> = [
   </div>
   <div class="row q-gutter-md q-pb-md q-px-md justify-center">
     <div v-for="techStack in techStacks" :key="techStack.name">
-      <q-img :src="techStack.filePath" width="60px" height="60px" />
+      <q-img :src="techStack.filePath" loading="eager" width="60px" height="60px" />
       <q-tooltip :delay="200">
         {{ techStack.name }}
       </q-tooltip>
