@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import DesktopScreen from '@/components/DesktopScreen.vue'
 import DesktopToolbar from '@/components/toolbar/DesktopToolbar.vue'
+import { QPageContainer } from 'quasar'
 </script>
 
 <template>
-  <desktop-toolbar />
-  <desktop-screen />
+  <q-layout class="disable-select cursor-default">
+    <q-page-container class="desktop">
+      <desktop-toolbar />
+      <desktop-screen />
+    </q-page-container>
+  </q-layout>
 </template>
 
 <style>
@@ -17,12 +22,14 @@ import DesktopToolbar from '@/components/toolbar/DesktopToolbar.vue'
 }
 
 html {
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  height: 100%;
 }
 
 body {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: auto;
 }
 
