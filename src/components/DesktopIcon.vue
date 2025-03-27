@@ -12,6 +12,10 @@ const { iconText, iconPath, action } = defineProps({
     type: Function,
     required: true,
   },
+  isOpenNewIcon: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const onDoubleClick = async (event: MouseEvent) => {
@@ -27,7 +31,10 @@ const onDoubleClick = async (event: MouseEvent) => {
       <q-img :src="iconPath" width="60px" height="60px" />
     </div>
     <div class="row icon-text cursor-pointer">
-      {{ iconText }}
+      <span>
+        {{ iconText }}
+        <q-icon v-if="isOpenNewIcon" name="open_in_new" />
+      </span>
     </div>
   </div>
 </template>
