@@ -13,7 +13,7 @@ const { openApp } = applicationStore
   <div class="cursor-pointer gt-md">
     {{ t('global.help') }}
     <q-menu>
-      <div @click="openApp(ApplicationList.ABOUT_PROJECT)">{{ t('about-project.app-title') }}</div>
+      <q-btn dense flat :label="t('about-project.app-title')" @click="openApp(ApplicationList.ABOUT_PROJECT)" />
     </q-menu>
   </div>
 </template>

@@ -10,7 +10,7 @@ export const useApplicationStore = defineStore('application', () => {
     if (foundApp) {
       focusApp(foundApp.name)
     } else {
-      openedApps.value.push(app)
+      openedApps.value = [...openedApps.value, app]
     }
   }
 
