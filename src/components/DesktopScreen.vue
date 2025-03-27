@@ -40,8 +40,8 @@ const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '
 </script>
 
 <template>
-  <div class="row inline q-gutter-md q-pl-md">
-    <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col q-gutter-y-md">
+  <div class="row inline q-gutter-sm q-pl-sm">
+    <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col q-gutter-y-sm">
       <desktop-icon
         v-for="desktopIcon in desktopIconsColumn"
         :key="getKeyFromText(desktopIcon.text)"
@@ -53,5 +53,6 @@ const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '
       />
     </div>
   </div>
+
   <app-window v-for="app in openedApps" :key="getKeyFromText(app.name)" :application="app" />
 </template>
