@@ -4,6 +4,33 @@ import AppWindow from '@/components/AppWindow.vue'
 import type Application from '@/types/Application.ts'
 import { useRedirection } from '@/composables/redirection.ts'
 import DesktopIcon from '@/components/DesktopIcon.vue'
+import type DesktopIconType from '@/types/DesktopIcon.ts'
+
+const { GITHUB_PROFILE_URL, ROOT_ME_PROFILE_URL, LINKED_IN_PROFILE_URL, openInNewTab } = useRedirection()
+
+const desktopIcons: Array<Array<DesktopIconType>> = [
+  [
+    {
+      path: '/icons/github.svg',
+      text: 'GitHub profile',
+      action: () => openInNewTab(GITHUB_PROFILE_URL),
+    },
+    {
+      path: '/icons/rootme.svg',
+      text: 'RootMe profile',
+      action: () => openInNewTab(ROOT_ME_PROFILE_URL),
+    },
+  ],
+  [
+    {
+      path: '/icons/linkedin.png',
+      text: 'LinkedIn profile',
+      action: () => openInNewTab(LINKED_IN_PROFILE_URL),
+    },
+  ],
+]
+
+const getDesktopIconKey = (desktopIcon: DesktopIconType) => desktopIcon.text.toLocaleLowerCase().replace(' ', '-')
 
 const openedApps = ref<Array<Application>>([{ name: 'some-app' }, { name: 'some-other-app' }])
 
@@ -20,16 +47,21 @@ const focusApp = (name: string) => {
 
 const isAppFocused = (name: string) =>
   openedApps.value.length > 0 && openedApps.value[openedApps.value.length - 1].name === name
-
-const { GITHUB_PROFILE_URL, openInNewTab } = useRedirection()
 </script>
 
 <template>
-  <desktop-icon
-    icon-path="/icons/github.svg"
-    icon-text="GitHub profile"
-    :action="() => openInNewTab(GITHUB_PROFILE_URL)"
-  />
+  <div class="row inline q-p">
+    <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col">
+      <desktop-icon
+        v-for="desktopIcon in desktopIconsColumn"
+        :key="getDesktopIconKey(desktopIcon)"
+        class="row"
+        :icon-path="desktopIcon.path"
+        :icon-text="desktopIcon.text"
+        :action="desktopIcon.action"
+      />
+    </div>
+  </div>
   <app-window
     v-for="app in openedApps"
     :key="app.name"
