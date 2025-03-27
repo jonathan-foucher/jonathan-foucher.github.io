@@ -83,7 +83,7 @@ const moveWindow: TouchPanValue = (event) => {
 
           <div class="app-title col text-center text-weight-bold">{{ name }}</div>
         </q-bar>
-        <q-item dense class="text-blue text-weight-bold"> aaaaaaaaa </q-item>
+        <slot />
       </q-card>
     </q-page-sticky>
   </q-slide-transition>

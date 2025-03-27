@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { shallowRef } from 'vue'
+import { useI18n } from 'vue-i18n'
 import AppWindow from '@/components/AppWindow.vue'
 import type Application from '@/types/Application.ts'
 import { useRedirection } from '@/composables/redirection.ts'
 import DesktopIcon from '@/components/DesktopIcon.vue'
 import type DesktopIconType from '@/types/DesktopIcon.ts'
+import AboutProjectApp from '@/components/apps/AboutProjectApp.vue'
 
+const { t } = useI18n()
 const { GITHUB_PROFILE_URL, ROOT_ME_PROFILE_URL, LINKED_IN_PROFILE_URL, openInNewTab } = useRedirection()
 
 const desktopIcons: Array<Array<DesktopIconType>> = [
@@ -35,7 +38,16 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
 
 const getDesktopIconKey = (desktopIcon: DesktopIconType) => desktopIcon.text.toLocaleLowerCase().replace(' ', '-')
 
-const openedApps = ref<Array<Application>>([{ name: 'some-app' }, { name: 'some-other-app' }])
+const openedApps = shallowRef<Array<Application>>([
+  {
+    name: t('about-project.app-title'),
+    component: AboutProjectApp,
+  },
+  {
+    name: 'some-other-app',
+    component: AboutProjectApp,
+  },
+])
 
 const closeApp = (name: string) => {
   openedApps.value = openedApps.value.filter((app) => app.name !== name)
@@ -73,5 +85,7 @@ const isAppFocused = (name: string) =>
     :close-app="closeApp"
     :focus-app="focusApp"
     :is-app-focused="isAppFocused"
-  />
+  >
+    <component :is="app.component" />
+  </app-window>
 </template>
