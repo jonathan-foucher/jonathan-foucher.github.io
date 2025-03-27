@@ -26,11 +26,11 @@ const onDoubleClick = async (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="col q-px-md q-py-sm desktop-icon" @click="onDoubleClick">
-    <div class="row justify-center text-center cursor-pointer">
+  <div class="col desktop-icon" @click="onDoubleClick">
+    <div class="row q-pt-sm">
       <q-img :src="iconPath" width="60px" height="60px" />
     </div>
-    <div class="row icon-text cursor-pointer">
+    <div class="row icon-text">
       <span>
         {{ iconText }}
         <q-icon v-if="isOpenNewIcon" name="open_in_new" />
@@ -42,8 +42,13 @@ const onDoubleClick = async (event: MouseEvent) => {
 <style scoped>
 .desktop-icon {
   width: 100px;
+  height: 100px;
   justify-content: center;
   text-align: center;
+}
+
+.desktop-icon:hover {
+  background: rgba(0, 100, 255, 0.1);
 }
 
 .icon-text {

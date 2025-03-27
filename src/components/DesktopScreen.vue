@@ -15,13 +15,13 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
   [
     {
       path: '/icons/github.svg',
-      text: 'GitHub profile',
+      text: 'GitHub',
       isOpenNewIcon: true,
       action: () => openInNewTab(GITHUB_PROFILE_URL),
     },
     {
       path: '/icons/rootme.svg',
-      text: 'RootMe profile',
+      text: 'RootMe',
       isOpenNewIcon: true,
       action: () => openInNewTab(ROOT_ME_PROFILE_URL),
     },
@@ -29,7 +29,7 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
   [
     {
       path: '/icons/linkedin.png',
-      text: 'LinkedIn profile',
+      text: 'LinkedIn',
       isOpenNewIcon: true,
       action: () => openInNewTab(LINKED_IN_PROFILE_URL),
     },
@@ -40,8 +40,8 @@ const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '
 </script>
 
 <template>
-  <div class="row inline q-p">
-    <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col">
+  <div class="row inline q-gutter-md q-pl-md">
+    <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col q-gutter-y-md">
       <desktop-icon
         v-for="desktopIcon in desktopIconsColumn"
         :key="getKeyFromText(desktopIcon.text)"
