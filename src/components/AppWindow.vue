@@ -61,19 +61,19 @@ const moveWindow: TouchPanValue = (event) => {
 <template>
   <q-slide-transition appear :duration="300">
     <q-page-sticky ref="windowRef" position="top-left" :offset="windowPosition" @click="focusApp(name)">
-      <q-bar
-        dark
-        :class="isAppFocused(name) ? 'bg-primary' : 'bg-grey-5'"
-        class="text-white"
-        v-touch-pan.prevent.mouse="moveWindow"
-      >
-        <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(name)" />
-        <q-icon name="lens" size="14.5px" color="grey" />
-        <q-btn dense flat round icon="lens" size="8.5px" color="green" />
+      <q-card class="q-pa-none bg-grey-2">
+        <q-bar
+          dark
+          :class="isAppFocused(name) ? 'bg-primary' : 'bg-grey-5'"
+          class="text-white"
+          v-touch-pan.prevent.mouse="moveWindow"
+        >
+          <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(name)" />
+          <q-icon name="lens" size="14.5px" color="grey" />
+          <q-btn dense flat round icon="lens" size="8.5px" color="green" />
 
-        <div class="app-title col text-center text-weight-bold">{{ name }}</div>
-      </q-bar>
-      <q-card class="q-pa-sm bg-grey-2">
+          <div class="app-title col text-center text-weight-bold">{{ name }}</div>
+        </q-bar>
         <q-item dense class="text-blue text-weight-bold"> aaaaaaaaa </q-item>
       </q-card>
     </q-page-sticky>
