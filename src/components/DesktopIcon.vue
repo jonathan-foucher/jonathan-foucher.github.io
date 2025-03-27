@@ -22,11 +22,11 @@ const onDoubleClick = async (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="col q-pa-md desktop-icon cursor-pointer" @click="onDoubleClick">
-    <div class="row justify-center text-center">
+  <div class="col q-px-md q-py-sm desktop-icon" @click="onDoubleClick">
+    <div class="row justify-center text-center cursor-pointer">
       <q-img :src="iconPath" width="60px" height="60px" />
     </div>
-    <div class="row icon-text">
+    <div class="row icon-text cursor-pointer">
       {{ iconText }}
     </div>
   </div>
