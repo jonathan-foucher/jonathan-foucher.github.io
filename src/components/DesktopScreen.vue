@@ -13,11 +13,13 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
     {
       path: '/icons/github.svg',
       text: 'GitHub profile',
+      isOpenNewIcon: true,
       action: () => openInNewTab(GITHUB_PROFILE_URL),
     },
     {
       path: '/icons/rootme.svg',
       text: 'RootMe profile',
+      isOpenNewIcon: true,
       action: () => openInNewTab(ROOT_ME_PROFILE_URL),
     },
   ],
@@ -25,6 +27,7 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
     {
       path: '/icons/linkedin.png',
       text: 'LinkedIn profile',
+      isOpenNewIcon: true,
       action: () => openInNewTab(LINKED_IN_PROFILE_URL),
     },
   ],
@@ -58,6 +61,7 @@ const isAppFocused = (name: string) =>
         class="row"
         :icon-path="desktopIcon.path"
         :icon-text="desktopIcon.text"
+        :is-open-new-icon="desktopIcon.isOpenNewIcon"
         :action="desktopIcon.action"
       />
     </div>
