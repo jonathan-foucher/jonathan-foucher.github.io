@@ -22,7 +22,7 @@ const onDoubleClick = async (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="col q-ma-md desktop-icon cursor-pointer" @click="onDoubleClick">
+  <div class="col q-pa-md desktop-icon cursor-pointer" @click="onDoubleClick">
     <div class="row justify-center text-center">
       <q-img :src="iconPath" width="60px" height="60px" />
     </div>
@@ -34,7 +34,7 @@ const onDoubleClick = async (event: MouseEvent) => {
 
 <style scoped>
 .desktop-icon {
-  width: 80px;
+  width: 100px;
   justify-content: center;
   text-align: center;
 }
