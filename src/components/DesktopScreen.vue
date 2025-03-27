@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import AppWindow from '@/components/AppWindow.vue'
 import type Application from '@/types/Application.ts'
+import { useRedirection } from '@/composables/redirection.ts'
+import DesktopIcon from '@/components/DesktopIcon.vue'
 
 const openedApps = ref<Array<Application>>([{ name: 'some-app' }, { name: 'some-other-app' }])
 
@@ -18,9 +20,16 @@ const focusApp = (name: string) => {
 
 const isAppFocused = (name: string) =>
   openedApps.value.length > 0 && openedApps.value[openedApps.value.length - 1].name === name
+
+const { GITHUB_PROFILE_URL, openInNewTab } = useRedirection()
 </script>
 
 <template>
+  <desktop-icon
+    icon-path="/icons/github.svg"
+    icon-text="GitHub profile"
+    :action="() => openInNewTab(GITHUB_PROFILE_URL)"
+  />
   <app-window
     v-for="app in openedApps"
     :key="app.name"
