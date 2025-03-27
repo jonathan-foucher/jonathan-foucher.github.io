@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type PropType, ref } from 'vue'
+import { onMounted, type PropType, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useApplicationStore } from '@/stores/application.ts'
 import { QPageContainer, type TouchPanValue } from 'quasar'
@@ -18,10 +18,19 @@ const applicationStore = useApplicationStore()
 const { closeApp, focusApp, isAppFocused } = applicationStore
 
 const APP_TOOLBAR_SIZE_PX = 40
+const TRANSITION_TIME_MS = 400
 const windowPosition = ref([10, APP_TOOLBAR_SIZE_PX + 10])
 const draggingWindow = ref(false)
 const windowRef = ref<InstanceType<typeof QPageContainer>>()
-const isFullSize = ref(false)
+const isFullSize = ref<boolean>(false)
+const showApp = ref<boolean>(true)
+
+onMounted(async () => {
+  windowPosition.value = [
+    (document.body.offsetWidth - application.width) / 2,
+    (document.body.offsetHeight - application.height) / 2,
+  ]
+})
 
 const getNewPositionValue = (currentValue: number, delta: number, min: number, max: number) => {
   const newValue = currentValue + delta
@@ -45,22 +54,28 @@ const moveWindow: TouchPanValue = (event) => {
         windowPosition.value[0],
         event.delta?.x ?? 0,
         0,
-        document.body.offsetWidth - windowRef.value?.$el?.clientWidth
+        document.body.offsetWidth - application.width
       ),
       getNewPositionValue(
         windowPosition.value[1],
         event.delta?.y ?? 0,
         APP_TOOLBAR_SIZE_PX,
-        document.body.offsetHeight - windowRef.value?.$el?.clientHeight
+        document.body.offsetHeight - application.height
       ),
     ]
   }
 }
+
+const hideAndCloseApp = () => {
+  showApp.value = false
+  setTimeout(() => closeApp(application.name), TRANSITION_TIME_MS)
+}
 </script>
 
 <template>
-  <q-slide-transition appear :duration="300">
+  <q-slide-transition appear :duration="TRANSITION_TIME_MS">
     <q-page-sticky
+      v-show="showApp"
       ref="windowRef"
       position="top-left"
       :offset="isFullSize ? [0, APP_TOOLBAR_SIZE_PX] : windowPosition"
@@ -69,7 +84,7 @@ const moveWindow: TouchPanValue = (event) => {
       <q-card
         class="q-pa-none bg-grey-2"
         :class="isFullSize ? 'window-width window-height' : ''"
-        :style="isFullSize ? '' : `width: ${application.width}; height: ${application.height}`"
+        :style="isFullSize ? '' : `width: ${application.width}px; height: ${application.height}px`"
       >
         <q-bar
           dark
@@ -77,7 +92,7 @@ const moveWindow: TouchPanValue = (event) => {
           class="text-white"
           v-touch-pan.prevent.mouse="isFullSize ? undefined : moveWindow"
         >
-          <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(application.name)" />
+          <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="hideAndCloseApp" />
           <q-icon name="lens" size="14.5px" color="grey" />
           <q-btn dense flat round icon="lens" size="8.5px" color="green" @click="isFullSize = !isFullSize" />
 
