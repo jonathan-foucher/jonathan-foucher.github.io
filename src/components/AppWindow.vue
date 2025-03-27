@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { type PropType, ref } from 'vue'
 import { QPageContainer, type TouchPanValue } from 'quasar'
+import type Application from '@/types/Application.ts'
 
-const { name, closeApp, focusApp, isAppFocused } = defineProps({
-  name: {
-    type: String,
+const { application, closeApp, focusApp, isAppFocused } = defineProps({
+  application: {
+    type: Object as PropType<Application>,
     required: true,
   },
   closeApp: {
@@ -39,7 +40,7 @@ const getNewPositionValue = (currentValue: number, delta: number, min: number, m
 }
 
 const moveWindow: TouchPanValue = (event) => {
-  focusApp(name)
+  focusApp(application.name)
 
   if (!isFullSize.value) {
     draggingWindow.value = !event.isFirst && !event.isFinal
@@ -68,22 +69,28 @@ const moveWindow: TouchPanValue = (event) => {
       ref="windowRef"
       position="top-left"
       :offset="isFullSize ? [0, APP_TOOLBAR_SIZE_PX] : windowPosition"
-      @click="focusApp(name)"
+      @click="focusApp(application.name)"
     >
-      <q-card class="q-pa-none bg-grey-2" :class="isFullSize ? 'window-width window-height' : ''">
+      <q-card
+        class="q-pa-none bg-grey-2"
+        :class="isFullSize ? 'window-width window-height' : ''"
+        :style="isFullSize ? '' : `width: ${application.width}; height: ${application.height}`"
+      >
         <q-bar
           dark
-          :class="isAppFocused(name) ? 'bg-primary' : 'bg-grey-5'"
+          :class="isAppFocused(application.name) ? 'bg-primary' : 'bg-grey-5'"
           class="text-white"
           v-touch-pan.prevent.mouse="isFullSize ? undefined : moveWindow"
         >
-          <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(name)" />
+          <q-btn dense flat round icon="lens" size="8.5px" color="red" @click="closeApp(application.name)" />
           <q-icon name="lens" size="14.5px" color="grey" />
           <q-btn dense flat round icon="lens" size="8.5px" color="green" @click="isFullSize = !isFullSize" />
 
-          <div class="app-title col text-center text-weight-bold">{{ name }}</div>
+          <div class="app-title col text-center text-weight-bold">{{ application.name }}</div>
         </q-bar>
-        <slot />
+        <div class="app-div">
+          <component :is="application.component" />
+        </div>
       </q-card>
     </q-page-sticky>
   </q-slide-transition>
@@ -94,5 +101,10 @@ const moveWindow: TouchPanValue = (event) => {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.app-div {
+  width: 100%;
+  height: 100%;
 }
 </style>

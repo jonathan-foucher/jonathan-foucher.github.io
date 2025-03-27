@@ -1,10 +1,5 @@
 <template>
-  <q-card class="app-card"> aaa </q-card>
+  <div class="app-card">aaa</div>
 </template>
 
-<style scoped>
-.app-card {
-  width: 400px;
-  height: 60vh;
-}
-</style>
+<style scoped></style>

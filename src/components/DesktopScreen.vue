@@ -36,16 +36,14 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
   ],
 ]
 
-const getDesktopIconKey = (desktopIcon: DesktopIconType) => desktopIcon.text.toLocaleLowerCase().replace(' ', '-')
+const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '-')
 
 const openedApps = shallowRef<Array<Application>>([
   {
     name: t('about-project.app-title'),
     component: AboutProjectApp,
-  },
-  {
-    name: 'some-other-app',
-    component: AboutProjectApp,
+    width: '400px',
+    height: '60vh',
   },
 ])
 
@@ -69,7 +67,7 @@ const isAppFocused = (name: string) =>
     <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col">
       <desktop-icon
         v-for="desktopIcon in desktopIconsColumn"
-        :key="getDesktopIconKey(desktopIcon)"
+        :key="getKeyFromText(desktopIcon.text)"
         class="row"
         :icon-path="desktopIcon.path"
         :icon-text="desktopIcon.text"
@@ -80,12 +78,10 @@ const isAppFocused = (name: string) =>
   </div>
   <app-window
     v-for="app in openedApps"
-    :key="app.name"
-    :name="app.name"
+    :key="getKeyFromText(app.name)"
+    :application="app"
     :close-app="closeApp"
     :focus-app="focusApp"
     :is-app-focused="isAppFocused"
-  >
-    <component :is="app.component" />
-  </app-window>
+  />
 </template>
