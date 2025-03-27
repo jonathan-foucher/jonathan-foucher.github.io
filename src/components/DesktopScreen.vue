@@ -43,7 +43,7 @@ const openedApps = shallowRef<Array<Application>>([
     name: t('about-project.app-title'),
     component: AboutProjectApp,
     width: '400px',
-    height: '60vh',
+    height: 'auto',
   },
 ])
 
