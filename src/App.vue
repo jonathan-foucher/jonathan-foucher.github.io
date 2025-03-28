@@ -33,10 +33,10 @@ const { isTurnedOn, isLoggedIn, isBooting, isShuttingDown } = storeToRefs(powerS
 
 <style>
 @font-face {
-  font-family: 'Menlo';
+  font-family: 'DejaVuSansMono';
   src:
-    local('Menlo'),
-    url(@/assets/fonts/Menlo-Regular.ttf) format('truetype');
+    local('DejaVuSansMono'),
+    url(@/assets/fonts/DejaVuSansMono.ttf) format('truetype');
 }
 
 html {
