@@ -9,7 +9,7 @@ const powerStore = usePowerStore()
 const { endShutdown } = powerStore
 
 const shutdown = () => {
-  setTimeout(() => endShutdown(), 2000)
+  setTimeout(() => endShutdown(), 4000)
 }
 
 onMounted(() => shutdown())
