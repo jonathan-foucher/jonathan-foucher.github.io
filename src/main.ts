@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from '@/App.vue'
 
 // quasar
-import { Quasar } from 'quasar'
+import { Quasar, Notify } from 'quasar'
 import quasarLang from 'quasar/lang/en-GB'
 import '@quasar/extras/material-icons/material-icons.css'
 import 'quasar/src/css/index.sass'
@@ -29,7 +29,7 @@ createApp(App)
   .use(pinia)
   .use(i18n)
   .use(Quasar, {
-    plugins: {},
+    plugins: { Notify },
     lang: quasarLang,
   })
   .mount('#app')
