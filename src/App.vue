@@ -5,15 +5,18 @@ import { QPageContainer } from 'quasar'
 import DesktopScreen from '@/components/DesktopScreen.vue'
 import DesktopToolbar from '@/components/DesktopToolbar.vue'
 import ShutdownScreen from '@/components/ShutdownScreen.vue'
+import BootingUpScreen from '@/components/BootingUpScreen.vue'
 
 const powerStore = usePowerStore()
-const { isTurnedOn, isLoggedIn, isBooting, isShuttingDown } = storeToRefs(powerStore)
+const { isTurnedOn, isLoggedIn, isBootingUp, isShuttingDown } = storeToRefs(powerStore)
 </script>
 
 <template>
   <q-layout class="disable-select cursor-default">
     <q-page-container>
-      <q-page v-if="isBooting"> </q-page>
+      <q-page v-if="isBootingUp" class="booting-up-background">
+        <BootingUpScreen />
+      </q-page>
 
       <q-page v-else-if="isShuttingDown"> </q-page>
 
@@ -49,6 +52,10 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: auto;
+}
+
+.booting-up-background {
+  background-color: #1e1f22;
 }
 
 .cursor-default {
