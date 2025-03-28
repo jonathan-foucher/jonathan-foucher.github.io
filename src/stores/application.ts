@@ -14,9 +14,9 @@ export const useApplicationStore = defineStore('application', () => {
     }
   }
 
-  const closeApp = (name: string) => {
-    openedApps.value = openedApps.value.filter((app) => app.name !== name)
-  }
+  const closeApp = (name: string) => (openedApps.value = openedApps.value.filter((app) => app.name !== name))
+
+  const closeAllApps = () => (openedApps.value = [])
 
   const focusApp = (name: string) => {
     const foundApp = openedApps.value.find((app) => app.name === name)
@@ -32,6 +32,7 @@ export const useApplicationStore = defineStore('application', () => {
     openedApps,
     openApp,
     closeApp,
+    closeAllApps,
     focusApp,
     isAppFocused,
   }
