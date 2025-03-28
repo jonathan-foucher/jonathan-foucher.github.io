@@ -69,7 +69,7 @@ body {
 }
 
 .desktop-background {
-  background-image: linear-gradient(35deg, darkslategrey, darkslateblue);
+  background-image: linear-gradient(25deg, #0c8787, #554298 70%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
