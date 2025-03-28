@@ -1,15 +1,31 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { usePowerStore } from '@/stores/power.ts'
+import { QPageContainer } from 'quasar'
 import DesktopScreen from '@/components/DesktopScreen.vue'
 import DesktopToolbar from '@/components/DesktopToolbar.vue'
-import { QPageContainer } from 'quasar'
+import ShutdownScreen from '@/components/ShutdownScreen.vue'
+
+const powerStore = usePowerStore()
+const { isTurnedOn, isLoggedIn, isBooting, isShuttingDown } = storeToRefs(powerStore)
 </script>
 
 <template>
   <q-layout class="disable-select cursor-default">
     <q-page-container>
-      <q-page class="fit desktop-background">
+      <q-page v-if="isBooting"> </q-page>
+
+      <q-page v-else-if="isShuttingDown"> </q-page>
+
+      <q-page v-else-if="isTurnedOn && !isLoggedIn"> </q-page>
+
+      <q-page v-else-if="isTurnedOn" class="fit desktop-background">
         <desktop-toolbar />
         <desktop-screen />
+      </q-page>
+
+      <q-page v-else class="bg-black">
+        <shutdown-screen />
       </q-page>
     </q-page-container>
   </q-layout>

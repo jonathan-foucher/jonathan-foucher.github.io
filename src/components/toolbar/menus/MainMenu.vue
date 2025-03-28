@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { ApplicationList } from '@/types/ApplicationList.ts'
 import { useApplicationStore } from '@/stores/application.ts'
+import { usePowerStore } from '@/stores/power.ts'
 
 const { t } = useI18n()
-const { openApp, closeAllApps } = useApplicationStore()
+const { closeAllApps } = useApplicationStore()
+
+const powerStore = usePowerStore()
+const { startShutdown } = powerStore
 </script>
 
 <template>
   <q-btn dense flat icon="menu" size="medium">
     <q-menu auto-close>
       <q-card class="main-menu q-pa-none">
-        <q-item dense class="q-py-sm q-px-none" clickable @click="openApp(ApplicationList.ABOUT_PROJECT)">
+        <q-item dense class="q-py-sm q-px-none" clickable @click="startShutdown">
           <q-icon class="col-2" name="power_settings_new" color="negative" size="medium" />
           <span class="col-10">
             {{ t('main-menu.shutdown') }}
