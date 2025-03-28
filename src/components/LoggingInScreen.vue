@@ -28,7 +28,7 @@ const addNextPasswordChar = (counter: number) => {
         validatePassword()
       }
     },
-    150 + Math.floor(Math.random() * 101)
+    100 + Math.floor(Math.random() * 101)
   )
 }
 
