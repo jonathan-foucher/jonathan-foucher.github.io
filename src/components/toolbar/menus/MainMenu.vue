@@ -10,7 +10,7 @@ const { openApp, closeAllApps } = useApplicationStore()
 <template>
   <q-btn dense flat icon="menu" size="medium">
     <q-menu auto-close>
-      <q-card class="main-menu q-pa-none bg-grey-2">
+      <q-card class="main-menu q-pa-none">
         <q-item dense class="q-py-sm q-px-none" clickable @click="openApp(ApplicationList.ABOUT_PROJECT)">
           <q-icon class="col-2" name="power_settings_new" color="negative" size="medium" />
           <span class="col-10">

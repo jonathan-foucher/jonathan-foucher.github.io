@@ -7,8 +7,10 @@ import { QPageContainer } from 'quasar'
 <template>
   <q-layout class="disable-select cursor-default">
     <q-page-container>
-      <desktop-toolbar />
-      <desktop-screen />
+      <q-page class="fit desktop-background">
+        <desktop-toolbar />
+        <desktop-screen />
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
@@ -35,6 +37,14 @@ body {
 
 .cursor-default {
   cursor: default;
+}
+
+.desktop-background {
+  background-image: linear-gradient(35deg, darkslategrey, darkslateblue);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(100vh - 40px);
 }
 
 .disable-select {

@@ -48,7 +48,7 @@ const onDoubleClick = async (event: MouseEvent) => {
 }
 
 .desktop-icon:hover {
-  background: rgba(0, 100, 255, 0.1);
+  background: rgba(0, 100, 255, 0.15);
 }
 
 .icon-text {

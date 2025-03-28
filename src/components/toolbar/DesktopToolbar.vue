@@ -9,7 +9,7 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
 </script>
 
 <template>
-  <q-bar class="desktop-bar bg-black text-white disable-select">
+  <q-bar class="desktop-bar bg-blue-8 text-white disable-select">
     <main-menu />
     <q-separator vertical inset color="white" class="q-mx-sm" />
     <help-menu />
