@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DesktopScreen from '@/components/DesktopScreen.vue'
-import DesktopToolbar from '@/components/toolbar/DesktopToolbar.vue'
+import DesktopToolbar from '@/components/DesktopToolbar.vue'
 import { QPageContainer } from 'quasar'
 </script>
 
