@@ -6,6 +6,7 @@ import DesktopScreen from '@/components/DesktopScreen.vue'
 import DesktopToolbar from '@/components/DesktopToolbar.vue'
 import ShutdownScreen from '@/components/ShutdownScreen.vue'
 import BootingUpScreen from '@/components/BootingUpScreen.vue'
+import LoggingInScreen from '@/components/LoggingInScreen.vue'
 
 const powerStore = usePowerStore()
 const { isTurnedOn, isLoggedIn, isBootingUp, isShuttingDown } = storeToRefs(powerStore)
@@ -15,12 +16,14 @@ const { isTurnedOn, isLoggedIn, isBootingUp, isShuttingDown } = storeToRefs(powe
   <q-layout class="disable-select cursor-default">
     <q-page-container>
       <q-page v-if="isBootingUp" class="booting-up-background">
-        <BootingUpScreen />
+        <booting-up-screen />
       </q-page>
 
       <q-page v-else-if="isShuttingDown"> </q-page>
 
-      <q-page v-else-if="isTurnedOn && !isLoggedIn"> </q-page>
+      <q-page v-else-if="isTurnedOn && !isLoggedIn" class="bg-primary">
+        <logging-in-screen />
+      </q-page>
 
       <q-page v-else-if="isTurnedOn" class="fit desktop-background">
         <desktop-toolbar />
