@@ -15,7 +15,7 @@ const { wifiEnabled, wifiLoading } = storeToRefs(wifiStore)
     <q-spinner-radio v-if="wifiLoading" color="warning" size="0.8em" />
     <q-icon v-else :name="wifiEnabled ? 'wifi' : 'wifi_off'" />
     <q-menu fit class="disable-select cursor-default">
-      <q-card class="wifi-card q-pa-sm bg-grey-2">
+      <q-card class="wifi-card q-pa-sm">
         <q-item dense class="text-blue text-weight-bold">
           {{ t('wifi-icon.wifi-network') }}
         </q-item>

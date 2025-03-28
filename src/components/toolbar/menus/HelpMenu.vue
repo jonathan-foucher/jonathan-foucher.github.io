@@ -10,12 +10,12 @@ const { openApp } = applicationStore
 </script>
 
 <template>
-  <q-btn no-caps class="q-px-xs">
+  <q-btn no-caps flat class="q-px-xs">
     <div class="help-text">
       {{ t('global.help') }}
     </div>
     <q-menu auto-close>
-      <q-card class="q-pa-none bg-grey-2">
+      <q-card class="q-pa-none">
         <q-item dense class="q-py-sm" clickable @click="openApp(ApplicationList.ABOUT_PROJECT)">
           {{ t('about-project.app-title') }}
         </q-item>
