@@ -3,11 +3,11 @@ import { useI18n } from 'vue-i18n'
 import { useWifiStore } from '@/stores/wifi.ts'
 import { storeToRefs } from 'pinia'
 
-const ROUTER_NAME = 'jf‑rtr‑x01'
 const { t } = useI18n()
 
 const wifiStore = useWifiStore()
 const { wifiEnabled, wifiLoading } = storeToRefs(wifiStore)
+const { ROUTER_NAME } = wifiStore
 </script>
 
 <template>
