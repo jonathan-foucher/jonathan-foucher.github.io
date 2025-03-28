@@ -1,4 +1,4 @@
-import AboutProjectApp from '@/components/apps/AboutProjectApp.vue'
+import AboutProjectApp from '@/components/desktop/apps/AboutProjectApp.vue'
 
 export class ApplicationList {
   static readonly ABOUT_PROJECT = {

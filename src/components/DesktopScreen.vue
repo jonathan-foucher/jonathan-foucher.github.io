@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useApplicationStore } from '@/stores/application.ts'
-import AppWindow from '@/components/AppWindow.vue'
+import AppWindow from '@/components/desktop/apps/AppWindow.vue'
 import { useRedirection } from '@/composables/redirection.ts'
-import DesktopIcon from '@/components/DesktopIcon.vue'
+import DesktopIcon from '@/components/desktop/DesktopIcon.vue'
 import type DesktopIconType from '@/types/DesktopIcon.ts'
 
 const applicationStore = useApplicationStore()
