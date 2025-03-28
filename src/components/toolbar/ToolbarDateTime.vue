@@ -21,11 +21,12 @@ const { timeZone, formattedDateTime, getCurrentTimeZoneOffset } = useDateTime()
 
 <style scoped>
 .date-time {
-  font-family: 'Menlo', monospace;
-  font-size: small !important;
+  font-family: 'DejaVuSansMono', monospace;
+  font-size: small;
 }
 
 .time-zone-tooltip {
+  font-family: 'DejaVuSansMono', monospace;
   font-size: small;
   white-space: nowrap;
 }

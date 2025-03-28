@@ -41,6 +41,7 @@ const onDoubleClick = async (event: MouseEvent) => {
 
 <style scoped>
 .desktop-icon {
+  font-family: 'DejaVuSansMono', monospace;
   width: 100px;
   height: 100px;
   justify-content: center;
