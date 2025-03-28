@@ -10,10 +10,22 @@ const { openApp } = applicationStore
 </script>
 
 <template>
-  <div class="cursor-pointer gt-md">
-    {{ t('global.help') }}
-    <q-menu>
-      <q-btn dense flat :label="t('about-project.app-title')" @click="openApp(ApplicationList.ABOUT_PROJECT)" />
+  <q-btn no-caps class="q-px-xs">
+    <div class="help-text">
+      {{ t('global.help') }}
+    </div>
+    <q-menu auto-close>
+      <q-card class="q-pa-none bg-grey-2">
+        <q-item dense class="q-py-sm" clickable @click="openApp(ApplicationList.ABOUT_PROJECT)">
+          {{ t('about-project.app-title') }}
+        </q-item>
+      </q-card>
     </q-menu>
-  </div>
+  </q-btn>
 </template>
+
+<style scoped>
+.help-text {
+  font-size: medium;
+}
+</style>
