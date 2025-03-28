@@ -4,16 +4,16 @@ import { defineStore } from 'pinia'
 export const usePowerStore = defineStore('power', () => {
   const isTurnedOn = ref<boolean>(false)
   const isLoggedIn = ref<boolean>(false)
-  const isBooting = ref<boolean>(false)
+  const isBootingUp = ref<boolean>(false)
   const isShuttingDown = ref<boolean>(false)
 
   const turnOn = () => {
-    isBooting.value = true
+    isBootingUp.value = true
     isTurnedOn.value = true
   }
 
   const endBooting = () => {
-    isBooting.value = false
+    isBootingUp.value = false
   }
 
   const endLoggingIn = () => {
@@ -33,7 +33,7 @@ export const usePowerStore = defineStore('power', () => {
   return {
     isTurnedOn,
     isLoggedIn,
-    isBooting,
+    isBootingUp,
     isShuttingDown,
     turnOn,
     endBooting,
