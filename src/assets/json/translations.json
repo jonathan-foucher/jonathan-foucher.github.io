@@ -2,6 +2,7 @@
   "en-GB": {
     "about-project.app-title": "About this project",
     "about-project.open-github": "Open project on GitHub",
+    "about-project.report-bug": "Report a bug",
     "about-project.summary": "This project is my personal page. It simulates a computer interface to introduce myself in an original way.",
     "about-project.technical-stack": "Project technical stack",
     "battery-icon.battery": "Battery",
@@ -22,6 +23,7 @@
   "fr-FR": {
     "about-project.app-title": "A propos de ce project",
     "about-project.open-github": "Ouvrir le projet sur GitHub",
+    "about-project.report-bug": "Signaler un bug",
     "about-project.summary": "Ce projet est ma page personnelle. Il simule l'interface d'un ordinateur pour me présenter de manière originale.",
     "about-project.technical-stack": "Stack technique du projet",
     "battery-icon.battery": "Batterie",
@@ -42,6 +44,7 @@
   "es-ES": {
     "about-project.app-title": "Sobre de este proyecto",
     "about-project.open-github": "Abra el proyecto en GitHub",
+    "about-project.report-bug": "Informar un error",
     "about-project.summary": "Este proyecto es mi página personal. Simula una interfaz de computadora para presentarme de forma original.",
     "about-project.technical-stack": "Stack técnica del proyecto",
     "battery-icon.battery": "Batería",
