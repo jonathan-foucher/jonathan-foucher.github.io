@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 import { useQuasar } from 'quasar'
 import { useI18n } from 'vue-i18n'
 
-const WIFI_ENABLED_LOCAL_STORAGE_KEY: string = 'wifi-enabled'
 const ROUTER_NAME: string = 'jf‑rtr‑x01'
 const WIFI_LOADING_TIME_MS: number = 3000
 
@@ -11,12 +10,7 @@ export const useWifiStore = defineStore('wifi', () => {
   const { t } = useI18n()
   const { notify } = useQuasar()
 
-  const getInitialWifiEnabledValue = (): boolean => {
-    const localStorageValue: string | null = localStorage.getItem(WIFI_ENABLED_LOCAL_STORAGE_KEY)
-    return localStorageValue === null || localStorageValue.toLocaleLowerCase() === 'true'
-  }
-
-  const wifiEnabled = ref<boolean>(getInitialWifiEnabledValue())
+  const wifiEnabled = ref<boolean>(false)
   const wifiLoading = ref<boolean>(false)
   const wifiLoadingTimeout = ref<number | undefined>(undefined)
 
@@ -32,8 +26,6 @@ export const useWifiStore = defineStore('wifi', () => {
     })
 
   watch(wifiEnabled, (newValue) => {
-    localStorage.setItem(WIFI_ENABLED_LOCAL_STORAGE_KEY, String(newValue))
-
     if (newValue) {
       wifiLoading.value = true
       clearTimeout(wifiLoadingTimeout.value)
