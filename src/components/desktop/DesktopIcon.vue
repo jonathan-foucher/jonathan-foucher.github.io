@@ -1,26 +1,17 @@
 <script setup lang="ts">
-const { iconText, iconPath, action } = defineProps({
-  iconPath: {
-    type: String,
+import type { PropType } from 'vue'
+import type DesktopIcon from '@/types/DesktopIcon.ts'
+
+const { desktopIcon } = defineProps({
+  desktopIcon: {
+    type: Object as PropType<DesktopIcon>,
     required: true,
-  },
-  iconText: {
-    type: String,
-    required: true,
-  },
-  action: {
-    type: Function,
-    required: true,
-  },
-  isOpenNewIcon: {
-    type: Boolean,
-    default: false,
   },
 })
 
 const onDoubleClick = async (event: MouseEvent) => {
   if (event.detail === 2) {
-    action()
+    desktopIcon.action()
   }
 }
 </script>
@@ -28,15 +19,16 @@ const onDoubleClick = async (event: MouseEvent) => {
 <template>
   <div class="col desktop-icon" @click="onDoubleClick">
     <div class="row q-pt-sm">
-      <q-img :src="iconPath" width="60px" height="60px" />
+      <q-icon v-if="desktopIcon.isSourceIcon" :src="desktopIcon.source" width="60px" height="60px" />
+      <q-img v-else :src="desktopIcon.source" width="60px" height="60px" />
     </div>
 
     <div class="open-new-icon">
-      <q-icon v-if="isOpenNewIcon" name="open_in_new" />
+      <q-icon v-if="desktopIcon.isOpenNewIcon" name="open_in_new" />
     </div>
 
     <span class="row icon-text">
-      {{ iconText }}
+      {{ desktopIcon.text }}
     </span>
   </div>
 </template>

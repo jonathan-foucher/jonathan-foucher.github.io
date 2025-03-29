@@ -14,13 +14,15 @@ const { GITHUB_PROFILE_URL, ROOT_ME_PROFILE_URL, LINKED_IN_PROFILE_URL, openInNe
 const desktopIcons: Array<Array<DesktopIconType>> = [
   [
     {
-      path: '/icons/github.svg',
+      source: '/icons/github.svg',
+      isSourceIcon: false,
       text: 'GitHub',
       isOpenNewIcon: true,
       action: () => openInNewTab(GITHUB_PROFILE_URL),
     },
     {
-      path: '/icons/rootme.svg',
+      source: '/icons/rootme.svg',
+      isSourceIcon: false,
       text: 'RootMe',
       isOpenNewIcon: true,
       action: () => openInNewTab(ROOT_ME_PROFILE_URL),
@@ -28,7 +30,8 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
   ],
   [
     {
-      path: '/icons/linkedin.png',
+      source: '/icons/linkedin.png',
+      isSourceIcon: false,
       text: 'LinkedIn',
       isOpenNewIcon: true,
       action: () => openInNewTab(LINKED_IN_PROFILE_URL),
@@ -46,10 +49,7 @@ const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '
         v-for="desktopIcon in desktopIconsColumn"
         :key="getKeyFromText(desktopIcon.text)"
         class="row"
-        :icon-path="desktopIcon.path"
-        :icon-text="desktopIcon.text"
-        :is-open-new-icon="desktopIcon.isOpenNewIcon"
-        :action="desktopIcon.action"
+        :desktop-icon="desktopIcon"
       />
     </div>
   </div>
