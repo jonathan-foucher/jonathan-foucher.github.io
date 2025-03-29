@@ -26,7 +26,7 @@ const validatePassword = () => {
 const addNextPasswordChar = (counter: number) => {
   setTimeout(
     () => {
-      password.value += ' '
+      password.value += '⏺'
 
       if (counter > 0) {
         addNextPasswordChar(counter - 1)
@@ -34,7 +34,7 @@ const addNextPasswordChar = (counter: number) => {
         validatePassword()
       }
     },
-    100 + Math.floor(Math.random() * 101)
+    50 + Math.floor(Math.random() * 201)
   )
 }
 
@@ -57,12 +57,12 @@ onMounted(() => {
       v-model="password"
       class="text-center"
       input-class="text-black q-pa-sm"
+      input-style="font-family: 'DejaVuSansMono'; letter-spacing: 0.12em;"
       rounded
       standout
       autofocus
       color="black"
       bg-color="grey-4"
-      type="password"
       :loading="isValidationLoading"
       @keydown.prevent
     >
