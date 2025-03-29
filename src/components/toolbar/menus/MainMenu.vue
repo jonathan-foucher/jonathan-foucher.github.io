@@ -2,12 +2,16 @@
 import { useI18n } from 'vue-i18n'
 import { useApplicationStore } from '@/stores/application.ts'
 import { usePowerStore } from '@/stores/power.ts'
+import { ApplicationList } from '@/types/ApplicationList.ts'
 
 const { t } = useI18n()
 const { closeAllApps } = useApplicationStore()
 
 const powerStore = usePowerStore()
 const { startShutdown } = powerStore
+
+const applicationStore = useApplicationStore()
+const { openApp } = applicationStore
 </script>
 
 <template>
@@ -34,6 +38,14 @@ const { startShutdown } = powerStore
           <q-icon class="col-2" name="power_settings_new" color="negative" size="medium" />
           <span class="col-10 no-wrap q-pr-xl">
             {{ t('main-menu.shutdown') }}
+          </span>
+        </q-item>
+        <q-separator />
+
+        <q-item dense class="q-pa-sm" clickable @click="openApp(ApplicationList.INTRODUCTION_PDF)">
+          <q-icon class="col-2" name="picture_as_pdf" color="black" size="medium" />
+          <span class="col-10 no-wrap q-pr-xl">
+            {{ `${t('introduction-pdf.file-name')}.pdf` }}
           </span>
         </q-item>
         <q-separator />

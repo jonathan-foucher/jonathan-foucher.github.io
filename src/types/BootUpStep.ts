@@ -7,14 +7,16 @@ export default interface BootUpStep {
 
 const SYSTEM_INFO = `
 System info
-  OS:          Some OS 64-bits
-  CPU          2GHz ARM arch
-  RAM:         32Go
+  OS    :        macOS Sequoia 15.3.2
+  CPU   :        Apple M2 Pro 8-core
+  GPU   :        Apple M2 Pro 8-core
+  RAM   :        24 Go
+  DISK  :        SSD - 512 Go
 `
 
 export const BOOT_UP_STEPS: Array<BootUpStep> = [
   {
-    text: 'Booting up system...',
+    text: 'Starting the BIOS...',
     timeMs: 300,
     isEndOfLine: false,
   },
@@ -25,13 +27,135 @@ export const BOOT_UP_STEPS: Array<BootUpStep> = [
     color: 'lime',
   },
   {
-    text: 'System started',
+    text: '',
     timeMs: 0,
     isEndOfLine: true,
   },
+
+  {
+    text: 'Hardware checks',
+    timeMs: 0,
+    color: 'royalblue',
+    isEndOfLine: true,
+  },
+
+  {
+    text: '  Checking the CPU...',
+    timeMs: 200,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 0,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+
+  {
+    text: '  Checking the RAM...',
+    timeMs: 200,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 0,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+
+  {
+    text: '  Checking the GPU...',
+    timeMs: 200,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 0,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+
+  {
+    text: '  Checking the Memory...',
+    timeMs: 200,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 0,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+  {
+    text: '',
+    timeMs: 0,
+    isEndOfLine: true,
+  },
+
+  {
+    text: 'Software configuration',
+    timeMs: 0,
+    color: 'royalblue',
+    isEndOfLine: true,
+  },
+  {
+    text: '  Loading the OS...',
+    timeMs: 300,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 1000,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+
+  {
+    text: '  Initializing the configurations...',
+    timeMs: 300,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 100,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+
+  {
+    text: '  Starting system utilities...',
+    timeMs: 200,
+    isEndOfLine: false,
+  },
+  {
+    text: 'ok',
+    timeMs: 0,
+    isEndOfLine: true,
+    color: 'lime',
+  },
+
+  {
+    text: '',
+    timeMs: 0,
+    isEndOfLine: true,
+  },
+
+  {
+    text: 'System started and ready',
+    timeMs: 200,
+    color: 'lime',
+    isEndOfLine: true,
+  },
+
   {
     text: SYSTEM_INFO,
-    timeMs: 2000,
+    timeMs: 200,
+    isEndOfLine: true,
+  },
+
+  {
+    text: 'Starting the OS...',
+    timeMs: 100,
     isEndOfLine: true,
   },
 ]
