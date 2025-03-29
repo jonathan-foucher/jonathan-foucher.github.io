@@ -22,7 +22,7 @@ const onDoubleClick = async (event: MouseEvent) => {
 <template>
   <div class="col desktop-icon" @click="onDoubleClick">
     <div class="row q-pt-sm">
-      <q-icon v-if="desktopIcon.isSourceIcon" :name="desktopIcon.source" size="60px" />
+      <q-icon v-if="desktopIcon.isSourceIcon" :name="desktopIcon.source" size="60px" class="icon-color" />
       <q-img v-else :src="desktopIcon.source" width="60px" height="60px" />
     </div>
 
@@ -36,7 +36,9 @@ const onDoubleClick = async (event: MouseEvent) => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/quasar-variables.sass';
+
 .desktop-icon {
   font-family: 'DejaVuSansMono', monospace;
   width: 100px;
@@ -47,6 +49,10 @@ const onDoubleClick = async (event: MouseEvent) => {
 
 .desktop-icon:hover {
   background: rgba(0, 45, 251, 0.2);
+}
+
+.icon-color {
+  color: $light-black;
 }
 
 .icon-text {
