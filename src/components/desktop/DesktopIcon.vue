@@ -30,12 +30,14 @@ const onDoubleClick = async (event: MouseEvent) => {
     <div class="row q-pt-sm">
       <q-img :src="iconPath" width="60px" height="60px" />
     </div>
-    <div class="row icon-text">
-      <span>
-        {{ iconText }}
-        <q-icon v-if="isOpenNewIcon" name="open_in_new" />
-      </span>
+
+    <div class="open-new-icon">
+      <q-icon v-if="isOpenNewIcon" name="open_in_new" />
     </div>
+
+    <span class="row icon-text">
+      {{ iconText }}
+    </span>
   </div>
 </template>
 
@@ -54,5 +56,11 @@ const onDoubleClick = async (event: MouseEvent) => {
 
 .icon-text {
   font-size: small;
+}
+
+.open-new-icon {
+  position: relative;
+  width: 0;
+  height: 0;
 }
 </style>
