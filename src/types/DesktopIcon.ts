@@ -1,5 +1,6 @@
 export default interface DesktopIcon {
-  path: string
+  source: string
+  isSourceIcon: boolean
   text: string
   isOpenNewIcon?: boolean
   action: () => void
