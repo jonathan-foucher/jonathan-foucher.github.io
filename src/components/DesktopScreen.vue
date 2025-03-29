@@ -45,6 +45,13 @@ const desktopIcons: Array<Array<DesktopIconType>> = [
       isOpenNewIcon: false,
       action: () => openApp(ApplicationList.INTRODUCTION_PDF),
     },
+    {
+      source: 'picture_as_pdf',
+      isSourceIcon: true,
+      text: 'resume-pdf.file-name',
+      isOpenNewIcon: false,
+      action: () => openApp(ApplicationList.RESUME_PDF),
+    },
   ],
 ]
 
