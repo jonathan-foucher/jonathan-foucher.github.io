@@ -25,10 +25,16 @@ const windowRef = ref<InstanceType<typeof QPageContainer>>()
 const isFullSize = ref<boolean>(false)
 const showApp = ref<boolean>(true)
 
+const getInitialPosition = (size: number, appSize: number): number => {
+  const percentShift = 5
+  const random = Math.random() * (2 * percentShift + 1) - percentShift
+  const centerPosition = (size - appSize) / 2
+  return centerPosition + Math.floor(random * (size / 100))
+}
 onMounted(async () => {
   windowPosition.value = [
-    (document.body.offsetWidth - application.width) / 2,
-    (document.body.offsetHeight - application.height) / 2,
+    getInitialPosition(document.body.offsetWidth, application.width),
+    getInitialPosition(document.body.offsetHeight, application.height),
   ]
 })
 
