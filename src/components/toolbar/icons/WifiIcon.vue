@@ -61,7 +61,7 @@ const { ROUTER_NAME } = wifiStore
   </q-btn>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import '@/quasar-variables.sass';
 
 .router-name-connecting {
