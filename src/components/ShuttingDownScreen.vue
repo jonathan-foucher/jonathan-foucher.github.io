@@ -27,9 +27,19 @@ onMounted(() => shutdown())
   <q-inner-loading
     showing
     :transition-duration="0"
-    class="bg-primary"
+    class="loader"
     size="100px"
-    color="black"
-    :label="t('shutdown.please-wait')"
+    label-class="q-pa-sm"
+    :label="t('shutdown.shutting-down')"
   />
 </template>
+
+<style lang="scss" scoped>
+@import '@/quasar-variables.sass';
+
+.loader {
+  background-color: $primary;
+  color: $light-black;
+  font-weight: bold;
+}
+</style>
