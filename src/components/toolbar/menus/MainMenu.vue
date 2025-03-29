@@ -13,14 +13,14 @@ const { startShutdown } = powerStore
 <template>
   <q-btn dense flat icon="menu" size="medium">
     <q-menu auto-close class="disable-select cursor-default">
-      <q-card bordered class="q-pa-none" @click.stop>
+      <q-card bordered class="q-pa-none">
         <q-item dense class="q-pa-sm card-header">
-          <div class="col-3 flex items-center q-pl-xs">
+          <div class="col-3 flex items-center q-pl-xs" @click.stop>
             <q-avatar size="md">
               <img src="@/assets/images/my-avatar.png" alt="avatar" />
             </q-avatar>
           </div>
-          <div class="col-9 flex items-center">
+          <div class="col-9 flex items-center" @click.stop>
             <i18n-t keypath="main-menu.connected-as" tag="span">
               <template v-slot:name>
                 <br />
