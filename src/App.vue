@@ -60,12 +60,23 @@ body {
   overflow: auto;
 }
 
-.booting-up-background {
-  background-color: #1e1f22;
-}
-
 .cursor-default {
   cursor: default;
+}
+
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
+
+<style lang="scss" scoped>
+@import '@/quasar-variables.sass';
+
+.booting-up-background {
+  background-color: $light-black;
 }
 
 .desktop-background {
@@ -74,12 +85,5 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: calc(100vh - 40px);
-}
-
-.disable-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 </style>
