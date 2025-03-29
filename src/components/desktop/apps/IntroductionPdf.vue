@@ -134,8 +134,8 @@ const socialLinks = [
 
     <span class="q-pl-md">{{ t('introduction-pdf.summary') }}</span>
 
-    <q-separator vertical class="q-mx-lg" />
-    <div class="q-gutter-md q-pa-md flex items-center">
+    <q-separator vertical class="q-mx-md" />
+    <div class="q-gutter-md q-pa-sm flex items-center">
       <span v-for="socialLink in socialLinks" :key="socialLink.name">
         <q-img
           :src="socialLink.logoFilePath"
