@@ -45,7 +45,7 @@ const { openApp } = applicationStore
         <q-item dense class="q-pa-sm" clickable @click="openApp(ApplicationList.INTRODUCTION_PDF)">
           <q-icon class="col-2" name="picture_as_pdf" color="black" size="medium" />
           <span class="col-10 no-wrap q-pr-xl">
-            {{ `${t('introduction-pdf.file-name')}.pdf` }}
+            {{ `${t('introduction-pdf.file-name')}` }}
           </span>
         </q-item>
         <q-separator />

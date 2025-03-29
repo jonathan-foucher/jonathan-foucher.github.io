@@ -107,17 +107,17 @@ const techStacks: Array<TechStack> = [
 
 const socialLinks = [
   {
-    name: 'LinkedIn',
+    name: 'redirect.linkedin',
     logoFilePath: '/icons/linkedin.png',
     linkToOpen: LINKED_IN_PROFILE_URL,
   },
   {
-    name: 'GitHub',
+    name: 'redirect.github',
     logoFilePath: '/icons/github.svg',
     linkToOpen: GITHUB_PROFILE_URL,
   },
   {
-    name: 'RootMe',
+    name: 'redirect.rootme',
     logoFilePath: '/icons/rootme.svg',
     linkToOpen: ROOT_ME_PROFILE_URL,
   },
@@ -146,7 +146,7 @@ const socialLinks = [
           @click="openInNewTab(socialLink.linkToOpen)"
         />
         <q-tooltip :delay="200">
-          {{ socialLink.name }}
+          {{ t(socialLink.name) }}
         </q-tooltip>
       </span>
     </div>
