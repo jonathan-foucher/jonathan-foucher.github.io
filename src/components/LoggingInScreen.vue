@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { storeToRefs } from 'pinia'
 import { usePowerStore } from '@/stores/power.ts'
+import { useWifiStore } from '@/stores/wifi.ts'
 
 const password = ref<string>('')
 const isValidationLoading = ref<boolean>(false)
@@ -8,11 +10,15 @@ const isValidationLoading = ref<boolean>(false)
 const powerStore = usePowerStore()
 const { endLoggingIn } = powerStore
 
+const wifiStore = useWifiStore()
+const { wifiEnabled } = storeToRefs(wifiStore)
+
 const validatePassword = () => {
   isValidationLoading.value = true
 
   setTimeout(() => {
     isValidationLoading.value = false
+    wifiEnabled.value = true
     endLoggingIn()
   }, 2000)
 }
