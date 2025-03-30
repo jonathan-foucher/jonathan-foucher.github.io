@@ -2,6 +2,7 @@ import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { useQuasar } from 'quasar'
 import { useI18n } from 'vue-i18n'
+import { useSoundSfx } from '@/composables/sound-sfx.ts'
 
 const ROUTER_NAME: string = 'jf‑rtr‑x01'
 const WIFI_LOADING_TIME_MS: number = 3000
@@ -9,12 +10,15 @@ const WIFI_LOADING_TIME_MS: number = 3000
 export const useWifiStore = defineStore('wifi', () => {
   const { t } = useI18n()
   const { notify } = useQuasar()
+  const { playNotificationSfx } = useSoundSfx()
 
   const wifiEnabled = ref<boolean>(false)
   const wifiLoading = ref<boolean>(false)
   const wifiLoadingTimeout = ref<number | undefined>(undefined)
 
-  const notifyWifiSuccess = () =>
+  const notifyWifiSuccess = () => {
+    playNotificationSfx()
+
     notify({
       position: 'bottom-right',
       timeout: 2500,
@@ -24,6 +28,7 @@ export const useWifiStore = defineStore('wifi', () => {
       caption: t('wifi-icon.connected-to-router', { router_name: ROUTER_NAME }),
       actions: [{ icon: 'close', rounded: true, dense: true, color: 'black' }],
     })
+  }
 
   watch(wifiEnabled, (newValue) => {
     if (newValue) {
