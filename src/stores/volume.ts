@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 const AUDIO_DISABLED_LOCAL_STORAGE_KEY: string = 'audio-disabled'
 const VOLUME_VALUE_LOCAL_STORAGE_KEY: string = 'volume-value'
-const DEFAULT_VOLUME_VALUE: number = 0.8
+const DEFAULT_VOLUME_VALUE: number = 0.3
 
 export const useVolumeStore = defineStore('volume', () => {
   const getInitialAudioDisabledValue = (): boolean => {
