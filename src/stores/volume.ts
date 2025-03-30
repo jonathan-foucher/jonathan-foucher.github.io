@@ -56,10 +56,13 @@ export const useVolumeStore = defineStore('volume', () => {
     volumeValue.value = newValue
   })
 
+  const volumeOutput = computed((): number => (audioDisabled.value ? 0 : volumeValue.value))
+
   return {
     audioDisabled,
     volumeValue,
     volumeIcon,
     toggleDisabledAudio,
+    volumeOutput,
   }
 })
