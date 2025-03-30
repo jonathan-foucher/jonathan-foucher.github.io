@@ -28,7 +28,7 @@ const { isTurnedOn, isLoggedIn, isBootingUp, isShuttingDown } = storeToRefs(powe
         <logging-in-screen />
       </q-page>
 
-      <q-page v-else-if="isTurnedOn" class="window-size">
+      <q-page v-else-if="isTurnedOn" class="window-size vertical-stretch">
         <desktop-toolbar />
         <desktop-screen />
       </q-page>
@@ -77,6 +77,12 @@ body {
 
 .booting-up-background {
   background-color: $light-black;
+}
+
+.vertical-stretch {
+  display: flex;
+  align-items: stretch;
+  flex-flow: column nowrap;
 }
 
 .window-size {
