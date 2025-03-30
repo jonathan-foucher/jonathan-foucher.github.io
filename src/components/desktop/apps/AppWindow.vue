@@ -2,6 +2,7 @@
 import { onMounted, type PropType, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useApplicationStore } from '@/stores/application.ts'
+import { useSoundSfx } from '@/composables/sound-sfx.ts'
 import { QPageContainer, type TouchPanValue } from 'quasar'
 import type Application from '@/types/Application.ts'
 
@@ -16,6 +17,8 @@ const { application } = defineProps({
 
 const applicationStore = useApplicationStore()
 const { closeApp, focusApp, isAppFocused } = applicationStore
+
+const { playMouseClickSfx } = useSoundSfx()
 
 const APP_TOOLBAR_SIZE_PX = 40
 const TRANSITION_TIME_MS = 400
@@ -32,7 +35,10 @@ const getInitialPosition = (size: number, appSize: number, minPosition: number):
   const newPosition = centerPosition + Math.floor(random * (size / 100))
   return Math.max(newPosition, minPosition)
 }
+
 onMounted(async () => {
+  playMouseClickSfx()
+
   windowPosition.value = [
     getInitialPosition(document.body.offsetWidth, application.width, 0),
     getInitialPosition(document.body.offsetHeight, application.height, APP_TOOLBAR_SIZE_PX),
@@ -74,6 +80,7 @@ const moveWindow: TouchPanValue = (event) => {
 }
 
 const hideAndCloseApp = () => {
+  playMouseClickSfx()
   showApp.value = false
   setTimeout(() => closeApp(application.name), TRANSITION_TIME_MS)
 }
