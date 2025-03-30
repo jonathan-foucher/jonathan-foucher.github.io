@@ -5,7 +5,7 @@ import { usePowerStore } from '@/stores/power.ts'
 import { ApplicationList } from '@/types/ApplicationList.ts'
 
 const { t } = useI18n()
-const { closeAllApps } = useApplicationStore()
+const { requestCloseAllApps } = useApplicationStore()
 
 const powerStore = usePowerStore()
 const { startShutdown } = powerStore
@@ -14,8 +14,8 @@ const applicationStore = useApplicationStore()
 const { openApp } = applicationStore
 
 const shutdown = () => {
-  closeAllApps()
-  startShutdown()
+  requestCloseAllApps()
+  setTimeout(() => startShutdown(), 1000)
 }
 </script>
 
@@ -61,7 +61,7 @@ const shutdown = () => {
         </q-item>
         <q-separator />
 
-        <q-item dense class="q-pa-sm" clickable @click="closeAllApps">
+        <q-item dense class="q-pa-sm" clickable @click="requestCloseAllApps">
           <q-icon class="col-2" name="close" color="negative" size="medium" />
           <span class="col-10 no-wrap q-pr-xl">
             {{ t('main-menu.close-all-apps') }}

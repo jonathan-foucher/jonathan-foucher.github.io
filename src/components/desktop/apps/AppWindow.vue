@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, type PropType, ref } from 'vue'
+import { onMounted, type PropType, ref, watch } from 'vue'
+import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useApplicationStore } from '@/stores/application.ts'
 import { useSoundSfx } from '@/composables/sound-sfx.ts'
@@ -16,12 +17,13 @@ const { application } = defineProps({
 })
 
 const applicationStore = useApplicationStore()
-const { closeApp, focusApp, isAppFocused } = applicationStore
+const { CLOSING_TRANSITION_TIME_MS, closeApp, focusApp, isAppFocused, acceptClosingRequest } = applicationStore
+
+const { requestsForClosing } = storeToRefs(applicationStore)
 
 const { playMouseClickSfx } = useSoundSfx()
 
 const APP_TOOLBAR_SIZE_PX = 40
-const TRANSITION_TIME_MS = 400
 const windowPosition = ref([10, APP_TOOLBAR_SIZE_PX + 10])
 const draggingWindow = ref(false)
 const windowRef = ref<InstanceType<typeof QPageContainer>>()
@@ -82,12 +84,19 @@ const moveWindow: TouchPanValue = (event) => {
 const hideAndCloseApp = () => {
   playMouseClickSfx()
   showApp.value = false
-  setTimeout(() => closeApp(application.name), TRANSITION_TIME_MS)
+  setTimeout(() => closeApp(application.name), CLOSING_TRANSITION_TIME_MS)
 }
+
+watch(requestsForClosing, (newValue) => {
+  if (newValue.includes(application.name)) {
+    acceptClosingRequest(application.name)
+    hideAndCloseApp()
+  }
+})
 </script>
 
 <template>
-  <q-slide-transition appear :duration="TRANSITION_TIME_MS">
+  <q-slide-transition appear :duration="CLOSING_TRANSITION_TIME_MS">
     <q-page-sticky
       v-show="showApp"
       ref="windowRef"
