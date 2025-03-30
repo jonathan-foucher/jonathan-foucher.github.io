@@ -11,6 +11,65 @@
     "global.help": "Help",
     "global.volume": "Volume",
     "introduction-pdf.app-title": "PDF Reader - introduction.pdf",
+
+    "resume-pdf.education-content-1.avatar-path": "/resume-logos/lycee-saint-remi.jpg",
+    "resume-pdf.education-content-1.content": "Engineering Sciences option\nGrade: mention \"Well\"",
+    "resume-pdf.education-content-1.subtitle": "Saint Rémi High School, Roubaix\n2010 - 2012",
+    "resume-pdf.education-content-1.title": "High school diploma of Science",
+
+    "resume-pdf.education-content-2.avatar-path": "/resume-logos/lycee-saint-remi.jpg",
+    "resume-pdf.education-content-2.content": "MP course (Mathematics and Physics)",
+    "resume-pdf.education-content-2.subtitle": "Saint Rémi High School, Roubaix\n2012 - 2014",
+    "resume-pdf.education-content-2.title": "Preparatory Class for Engineering Schools",
+
+    "resume-pdf.education-content-3.avatar-path": "/resume-logos/lille-university.jpg",
+    "resume-pdf.education-content-3.content": "Study of the main fields of Physics: electromagnetism, thermodynamics, optics, mechanics, electricity, special relativity, astronomy and waves.",
+    "resume-pdf.education-content-3.subtitle": "Lille University of Sciences and technologies\n2014 - 2015",
+    "resume-pdf.education-content-3.title": "Bachelor's Degree in Physics (2nd year)",
+
+    "resume-pdf.education-content-4.avatar-path": "/resume-logos/lille-university.jpg",
+    "resume-pdf.education-content-4.content": "Initiation to programming with C and assembler\nImage processing with ImageJ software\nDiscovery of I²C, Dali, SPI and DMX communication protocols\nElectronics, electrical engineering and thermal science\n\nProject: Measuring the snow depth with an Arduino board",
+    "resume-pdf.education-content-4.subtitle": "Lille University of Sciences and technologies\n2015 - 2016",
+    "resume-pdf.education-content-4.title": "Bachelor's Degree in Electrical Engineering (3rd year)",
+
+    "resume-pdf.education-content-5.avatar-path": "/resume-logos/lille-university.jpg",
+    "resume-pdf.education-content-5.content": "C / C ++ , Java and VBA programming languages\nRelational databases and SQL language\nWeb development in HTML, CSS and PHP\nMobile application development with WinDev software\nAnalysis of a home automation project to be done in KNX\n\nGrade: Honors\nTOEIC: 925",
+    "resume-pdf.education-content-5.subtitle": "Lille University of Sciences and technologies\n2016 - 2018",
+    "resume-pdf.education-content-5.title": "Master's Degree in Electrical Engineering",
+
+    "resume-pdf.education-heading": "Education",
+
+    "resume-pdf.experience-content-1.avatar-path": "/resume-logos/eolane.jpg",
+    "resume-pdf.experience-content-1.content": "Soldering of electronic components (resistors / capacitors)\nSetting beacons with a network analyzer",
+    "resume-pdf.experience-content-1.subtitle": "éolane\nJun 2016 - Jul 2016 (2 mos)\nRoncq, Hauts-de-France, France",
+    "resume-pdf.experience-content-1.title": "Electronics Technician",
+
+    "resume-pdf.experience-content-2.avatar-path": "/resume-logos/ad-industries.jpg",
+    "resume-pdf.experience-content-2.content": "VBA development for automated data processing in Excel\nDevelopment of scripts (VBS and batch) to automate IT actions",
+    "resume-pdf.experience-content-2.subtitle": "MS Composites (AD Industries)\nMay 2017 - Jul 2017 (3 mos)\nLiévin, Hauts-de-France, France",
+    "resume-pdf.experience-content-2.title": "VBA developer intern",
+
+    "resume-pdf.experience-content-3.avatar-path": "/resume-logos/indelec.jpg",
+    "resume-pdf.experience-content-3.content": "Realization of an image processing to isolate an electric arc on a photo\nDefinition of a method for calculating the coordinates of the points of this electric arc\nReconstitution and schematization of the trajectory of the electric arc in 3D\nDevelopment of a Java application to automate these tasks",
+    "resume-pdf.experience-content-3.subtitle": "Indelec\nApr 2018 - Sep 2018 (6 mos)\nDouai, Hauts-de-France, France",
+    "resume-pdf.experience-content-3.title": "Java developer intern - R&D team",
+
+    "resume-pdf.experience-content-4.avatar-path": "/resume-logos/m2i-formation.jpg",
+    "resume-pdf.experience-content-4.content": "Front: HTML, CSS and Javascript / frameworks JQuery, Node.js, Angular 7 and ReactJS\nBack: Java EE, Servlets & JSP, architecture MVC, frameworks Struts and Spring\nRelational databases with SQL, JDBC and Hibernate\n\nTeam project \"smartshop\":\ncreate an online sales site with user login, product list display, cart management and order completion.",
+    "resume-pdf.experience-content-4.subtitle": "M2i Formation\nJan 2019 - Mar 2019 (3 mos)\nVilleneuve d'Ascq, Hauts-de-France, France",
+    "resume-pdf.experience-content-4.title": "Trainee in full stack web development",
+
+    "resume-pdf.experience-content-5.avatar-path": "/resume-logos/sogeti.jpg",
+    "resume-pdf.experience-content-5.content": "[January 2020 - August 2022] Full stack developer at Decathlon in local offer team\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Deployment: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Method: Agile Kanban\n\n[June - December 2019] IT engineer / support engineer at Decathlon in offer and plan teams\n  - Level 3 requests resolution and bug analysis (code / database)\n  - Functional tests and production deployment\n  - Writing SQL scripts (extraction, bug correction)\n  - Creation of a monthly automated reporting on the support activity\n  - Development of a live monitoring application on the support requests (Angular 8 / Node.js)\n\n[March 2019 - May 2019] Innovation Centre at Sogeti on DivaTrade project:\n    Full stack development with JHipster, Angular 7, Java, Spring Boot, Docker, Git",
+    "resume-pdf.experience-content-5.subtitle": "Sogeti\nMar 2019 - Aug 2022 (3 yrs 6 mos)\nLille Area, Hauts-de-France, France",
+    "resume-pdf.experience-content-5.title": "Applications Consultant",
+
+    "resume-pdf.experience-content-6.avatar-path": "/resume-logos/decathlon.jpg",
+    "resume-pdf.experience-content-6.content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
+    "resume-pdf.experience-content-6.subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 yrs 8 mos)\nLille Area, Hauts-de-France, France",
+    "resume-pdf.experience-content-6.title": "Full stack developer at offer team - Freelance",
+
+    "resume-pdf.experience-heading": "Experience",
     "introduction-pdf.file-name": "introduction.pdf",
     "introduction-pdf.tools-worked-with": "Some of the tools I have been working with",
     "introduction-pdf.summary": "\uD83D\uDC4B\uD83C\uDFFB Hello, my name is Jonathan Foucher\n\uD83E\uDDD1\uD83C\uDFFB\u200D\uD83D\uDCBB I'm a full stack web developer\n\uD83D\uDCCC I live near Lille, Hauts-de-France \uD83C\uDDEB\uD83C\uDDF7",
