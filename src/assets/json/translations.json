@@ -39,31 +39,31 @@
         "content-1": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
           "content": "Engineering Sciences option\nGrade: mention \"Well\"",
-          "subtitle": "Saint Rémi High School, Roubaix\n2010 - 2012",
+          "subtitle": "Saint Rémi High School\n2010 - 2012\nRoubaix, Hauts-de-France, France",
           "title": "High school diploma of Science"
         },
         "content-2": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
           "content": "MP course (Mathematics and Physics)",
-          "subtitle": "Saint Rémi High School, Roubaix\n2012 - 2014",
+          "subtitle": "Saint Rémi High School\n2012 - 2014\nRoubaix, Hauts-de-France, France",
           "title": "Preparatory Class for Engineering Schools"
         },
         "content-3": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Study of the main fields of Physics: electromagnetism, thermodynamics, optics, mechanics, electricity, special relativity, astronomy and waves.",
-          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015",
+          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Bachelor's Degree (2nd year) - Physics"
         },
         "content-4": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Initiation to programming with C and assembler\nImage processing with ImageJ software\nDiscovery of I²C, Dali, SPI and DMX communication protocols\nElectronics, electrical engineering and thermal science\n\nProject: Measuring the snow depth with an Arduino board",
-          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016",
+          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Bachelor's Degree (3rd year) - Electrical Engineering"
         },
         "content-5": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "C / C ++ , Java and VBA programming languages\nRelational databases and SQL language\nWeb development in HTML, CSS and PHP\nMobile application development with WinDev software\nAnalysis of a home automation project to be done in KNX\n\nGrade: Honors\nTOEIC: 925",
-          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018",
+          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Master's Degree - Industrial Computing and Automation"
         },
         "heading": "Education"
@@ -103,7 +103,7 @@
           "avatar-path": "/resume-logos/decathlon.jpg",
           "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
           "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 yrs 8 mos)\nLille Area, Hauts-de-France, France",
-          "title": "Full stack developer at offer team - Freelance"
+          "title": "Full stack developer at offer team"
         },
         "heading": "Experience"
       },
@@ -160,31 +160,31 @@
         "content-1": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
           "content": "Option Sciences de l'Ingénieur\nNiveau: mention bien",
-          "subtitle": "Lycée Saint Rémi, Roubaix\n2010 - 2012",
+          "subtitle": "Lycée Saint Rémi\n2010 - 2012\nRoubaix, Hauts-de-France, France",
           "title": "Baccalauréat S"
         },
         "content-2": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
           "content": "Filière MP (Mathématiques, Physique)",
-          "subtitle": "Lycée Saint Rémi, Roubaix\n2012 - 2014",
+          "subtitle": "Lycée Saint Rémi\n2012 - 2014\nRoubaix, Hauts-de-France, France",
           "title": "Classe Préparatoire aux Grandes Écoles"
         },
         "content-3": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Étude des principaux domaines de la physique : l'électromagnétisme, la thermodynamique, l'optique, la mécanique, l'électricité, la relativité restreinte, l'astronomie et les ondes.",
-          "subtitle": "Université des Sciences et Technologies de Lille\n2014 - 2015",
+          "subtitle": "Université des Sciences et Technologies de Lille\n2014 - 2015\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Licence 2 - Physique"
         },
         "content-4": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Initiation à la programmation avec le C et l'assembleur\nTraitement d'images avec le logiciel ImageJ\nDécouverte des protocoles de communication I2C, Dali, SPI et DMX\nÉlectronique, électrotechnique et thermique\n\nProjet : Mesure de la hauteur de neige avec une carte Arduino",
-          "subtitle": "Université des Sciences et Technologies de Lille\n2015 - 2016",
+          "subtitle": "Université des Sciences et Technologies de Lille\n2015 - 2016\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Licence 3 - Génie électrique"
         },
         "content-5": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Langages de programmation C/C++, Java et VBA\nBases de données relationnelles et langage SQL\nDéveloppement web en HTML, CSS et PHP\nDéveloppement d'applications mobiles avec le logiciel WinDev\nAnalyse d'un projet domotique à réaliser en KNX\n\nNiveau: Mention très bien\nTOEIC : 925",
-          "subtitle": "Université des Sciences et Technologies de Lille\n2016 - 2018",
+          "subtitle": "Université des Sciences et Technologies de Lille\n2016 - 2018\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Master - Informatique industrielle et automatisme"
         },
         "heading": "Formation"
@@ -224,7 +224,7 @@
           "avatar-path": "/resume-logos/decathlon.jpg",
           "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDéploiement: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMéthode: Agile Kanban",
           "subtitle": "Decathlon - Freelance\nAoût 2022 - Mars 2025 (2 ans 8 mois)\nLille, Hauts-de-France, France",
-          "title": "Développeur full stack dans l'équipe offre - Freelance"
+          "title": "Développeur full stack dans l'équipe offre"
         },
         "heading": "Expérience"
       },
@@ -281,31 +281,31 @@
         "content-1": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
           "content": "Engineering Sciences option\nGrade: mention \"Well\"",
-          "subtitle": "Saint Rémi High School, Roubaix\n2010 - 2012",
+          "subtitle": "Saint Rémi High School\n2010 - 2012\nRoubaix, Hauts-de-France, France",
           "title": "High school diploma of Science"
         },
         "content-2": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
           "content": "MP course (Mathematics and Physics)",
-          "subtitle": "Saint Rémi High School, Roubaix\n2012 - 2014",
+          "subtitle": "Saint Rémi High School\n2012 - 2014\nRoubaix, Hauts-de-France, France",
           "title": "Preparatory Class for Engineering Schools"
         },
         "content-3": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Study of the main fields of Physics: electromagnetism, thermodynamics, optics, mechanics, electricity, special relativity, astronomy and waves.",
-          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015",
+          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Bachelor's Degree (2nd year) - Physics"
         },
         "content-4": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Initiation to programming with C and assembler\nImage processing with ImageJ software\nDiscovery of I²C, Dali, SPI and DMX communication protocols\nElectronics, electrical engineering and thermal science\n\nProject: Measuring the snow depth with an Arduino board",
-          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016",
+          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Bachelor's Degree (3rd year) - Electrical Engineering"
         },
         "content-5": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "C / C ++ , Java and VBA programming languages\nRelational databases and SQL language\nWeb development in HTML, CSS and PHP\nMobile application development with WinDev software\nAnalysis of a home automation project to be done in KNX\n\nGrade: Honors\nTOEIC: 925",
-          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018",
+          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Master's Degree - Industrial Computing and Automation"
         },
         "heading": "Formación"
@@ -345,7 +345,7 @@
           "avatar-path": "/resume-logos/decathlon.jpg",
           "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
           "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 años 8 meses)\nLille Area, Hauts-de-France, France",
-          "title": "Full stack developer at offer team - Freelance"
+          "title": "Full stack developer at offer team"
         },
         "heading": "Experiencia"
       },
