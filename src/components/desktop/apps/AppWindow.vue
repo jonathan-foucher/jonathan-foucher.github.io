@@ -25,16 +25,17 @@ const windowRef = ref<InstanceType<typeof QPageContainer>>()
 const isFullSize = ref<boolean>(false)
 const showApp = ref<boolean>(true)
 
-const getInitialPosition = (size: number, appSize: number): number => {
+const getInitialPosition = (size: number, appSize: number, minPosition: number): number => {
   const percentShift = 5
   const random = Math.random() * (2 * percentShift + 1) - percentShift
   const centerPosition = (size - appSize) / 2
-  return centerPosition + Math.floor(random * (size / 100))
+  const newPosition = centerPosition + Math.floor(random * (size / 100))
+  return Math.max(newPosition, minPosition)
 }
 onMounted(async () => {
   windowPosition.value = [
-    getInitialPosition(document.body.offsetWidth, application.width),
-    getInitialPosition(document.body.offsetHeight, application.height),
+    getInitialPosition(document.body.offsetWidth, application.width, 0),
+    getInitialPosition(document.body.offsetHeight, application.height, APP_TOOLBAR_SIZE_PX),
   ]
 })
 
@@ -88,7 +89,7 @@ const hideAndCloseApp = () => {
       @click="focusApp(application.name)"
     >
       <q-card
-        class="q-pa-none bg-grey-2"
+        class="q-pa-none bg-grey-2 vertical-stretch"
         :class="isFullSize ? 'window-width window-height' : ''"
         :style="isFullSize ? '' : `width: ${application.width}px; height: ${application.height}px`"
       >
@@ -104,9 +105,7 @@ const hideAndCloseApp = () => {
 
           <div class="app-title col text-center text-weight-bold">{{ t(application.name) }}</div>
         </q-bar>
-        <div class="app-div">
-          <component :is="application.component" />
-        </div>
+        <component :is="application.component" />
       </q-card>
     </q-page-sticky>
   </q-slide-transition>
@@ -119,8 +118,9 @@ const hideAndCloseApp = () => {
   white-space: nowrap;
 }
 
-.app-div {
-  width: 100%;
-  height: 100%;
+.vertical-stretch {
+  display: flex;
+  align-items: stretch;
+  flex-flow: column nowrap;
 }
 </style>
