@@ -51,20 +51,20 @@
         "content-3": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Study of the main fields of Physics: electromagnetism, thermodynamics, optics, mechanics, electricity, special relativity, astronomy and waves.",
-          "subtitle": "Lille University of Sciences and technologies\n2014 - 2015",
-          "title": "Bachelor's Degree in Physics (2nd year)"
+          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015",
+          "title": "Bachelor's Degree (2nd year) - Physics"
         },
         "content-4": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "Initiation to programming with C and assembler\nImage processing with ImageJ software\nDiscovery of I²C, Dali, SPI and DMX communication protocols\nElectronics, electrical engineering and thermal science\n\nProject: Measuring the snow depth with an Arduino board",
-          "subtitle": "Lille University of Sciences and technologies\n2015 - 2016",
-          "title": "Bachelor's Degree in Electrical Engineering (3rd year)"
+          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016",
+          "title": "Bachelor's Degree (3rd year) - Electrical Engineering"
         },
         "content-5": {
           "avatar-path": "/resume-logos/lille-university.jpg",
           "content": "C / C ++ , Java and VBA programming languages\nRelational databases and SQL language\nWeb development in HTML, CSS and PHP\nMobile application development with WinDev software\nAnalysis of a home automation project to be done in KNX\n\nGrade: Honors\nTOEIC: 925",
-          "subtitle": "Lille University of Sciences and technologies\n2016 - 2018",
-          "title": "Master's Degree in Electrical Engineering"
+          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018",
+          "title": "Master's Degree - Industrial Computing and Automation"
         },
         "heading": "Education"
       },
@@ -95,7 +95,7 @@
         },
         "content-5": {
           "avatar-path": "/resume-logos/sogeti.jpg",
-          "content": "[January 2020 - August 2022] Full stack developer at Decathlon in local offer team\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Deployment: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Method: Agile Kanban\n\n[June - December 2019] IT engineer / support engineer at Decathlon in offer and plan teams\n  - Level 3 requests resolution and bug analysis (code / database)\n  - Functional tests and production deployment\n  - Writing SQL scripts (extraction, bug correction)\n  - Creation of a monthly automated reporting on the support activity\n  - Development of a live monitoring application on the support requests (Angular 8 / Node.js)\n\n[March 2019 - May 2019] Innovation Centre at Sogeti on DivaTrade project:\n    Full stack development with JHipster, Angular 7, Java, Spring Boot, Docker, Git",
+          "content": "[January 2020 - August 2022] Full stack developer at Decathlon in local offer team\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Deployment: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Method: Agile Kanban\n\n[June - December 2019] IT engineer / support engineer at Decathlon in offer and plan teams\n  - Level 3 requests resolution and bug analysis (code / database)\n  - Functional tests and production deployment\n  - Writing SQL scripts (extraction, bug correction)\n  - Creation of a monthly automated reporting on the support activity\n  - Development of a live monitoring application on the support requests (Angular 8 / Node.js)\n\n[March 2019 - May 2019] Innovation Centre at Sogeti on DivaTrade project:\n    Full stack development with JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertification Microsoft Azure AZ-900",
           "subtitle": "Sogeti\nMar 2019 - Aug 2022 (3 yrs 6 mos)\nLille Area, Hauts-de-France, France",
           "title": "Applications Consultant"
         },
@@ -156,6 +156,78 @@
     },
     "resume-pdf": {
       "app-title": "PDF Reader - CV.pdf",
+      "education": {
+        "content-1": {
+          "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
+          "content": "Option Sciences de l'Ingénieur\nNiveau: mention bien",
+          "subtitle": "Lycée Saint Rémi, Roubaix\n2010 - 2012",
+          "title": "Baccalauréat S"
+        },
+        "content-2": {
+          "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
+          "content": "Filière MP (Mathématiques, Physique)",
+          "subtitle": "Lycée Saint Rémi, Roubaix\n2012 - 2014",
+          "title": "Classe Préparatoire aux Grandes Écoles"
+        },
+        "content-3": {
+          "avatar-path": "/resume-logos/lille-university.jpg",
+          "content": "Étude des principaux domaines de la physique : l'électromagnétisme, la thermodynamique, l'optique, la mécanique, l'électricité, la relativité restreinte, l'astronomie et les ondes.",
+          "subtitle": "Université des Sciences et Technologies de Lille\n2014 - 2015",
+          "title": "Licence 2 - Physique"
+        },
+        "content-4": {
+          "avatar-path": "/resume-logos/lille-university.jpg",
+          "content": "Initiation à la programmation avec le C et l'assembleur\nTraitement d'images avec le logiciel ImageJ\nDécouverte des protocoles de communication I2C, Dali, SPI et DMX\nÉlectronique, électrotechnique et thermique\n\nProjet : Mesure de la hauteur de neige avec une carte Arduino",
+          "subtitle": "Université des Sciences et Technologies de Lille\n2015 - 2016",
+          "title": "Licence 3 - Génie électrique"
+        },
+        "content-5": {
+          "avatar-path": "/resume-logos/lille-university.jpg",
+          "content": "Langages de programmation C/C++, Java et VBA\nBases de données relationnelles et langage SQL\nDéveloppement web en HTML, CSS et PHP\nDéveloppement d'applications mobiles avec le logiciel WinDev\nAnalyse d'un projet domotique à réaliser en KNX\n\nNiveau: Mention très bien\nTOEIC : 925",
+          "subtitle": "Université des Sciences et Technologies de Lille\n2016 - 2018",
+          "title": "Master - Informatique industrielle et automatisme"
+        },
+        "heading": "Formation"
+      },
+      "experience": {
+        "content-1": {
+          "avatar-path": "/resume-logos/eolane.jpg",
+          "content": "Brasage de composants électroniques (résistances/condensateurs)\nRéglage de balises avec un analyseur de réseaux",
+          "subtitle": "éolane\nJuin 2016 - Juillet 2016 (2 mois)\nRoncq, Hauts-de-France, France",
+          "title": "Technicien en électronique"
+        },
+        "content-2": {
+          "avatar-path": "/resume-logos/ad-industries.jpg",
+          "content": "Développement VBA pour assurer le traitement automatisé de données sur Excel\nDéveloppement de scripts (VBS et batch) pour automatiser des actions informatiques",
+          "subtitle": "MS Composites (AD Industries)\nMai 2017 - Juillet 2017 (3 mois)\nLiévin, Hauts-de-France, France",
+          "title": "Stagiaire développeur VBA"
+        },
+        "content-3": {
+          "avatar-path": "/resume-logos/indelec.jpg",
+          "content": "Réalisation d'un traitement d'images pour isoler un arc électrique sur une photo\nDéfinition d'une méthode de calcul des coordonnées des points de cet arc électrique\nReconstitution et schématisation de la trajectoire de l'arc électrique en 3D\nDéveloppement d'une application Java paramétrable permettant d’automatiser ces tâches",
+          "subtitle": "Indelec\nAvril 2018 - Septembre 2018 (6 mois)\nDouai, Hauts-de-France, France",
+          "title": "Stagiaire développeur Java - service R&D"
+        },
+        "content-4": {
+          "avatar-path": "/resume-logos/m2i-formation.jpg",
+          "content": "Front : HTML, CSS et Javascript / frameworks JQuery, Node.js, Angular 7 et ReactJS\nBack : Java EE, Servlets & JSP, architecture MVC, frameworks Struts et Spring\nBases de données relationnelles avec SQL, JDBC et Hibernate\n\nProjet de groupe \"smartshop\":\nréaliser un site de vente en ligne avec la connexion des utilisateurs, l'affichage de la liste des produits, la gestion du panier et la finalisation de la commande.",
+          "subtitle": "M2i Formation\nJanvier 2019 - Mars 2019 (3 mois)\nVilleneuve d'Ascq, Hauts-de-France, France",
+          "title": "Stagiaire en développement web full stack"
+        },
+        "content-5": {
+          "avatar-path": "/resume-logos/sogeti.jpg",
+          "content": "[Janvier 2020 - Août 2022] Développeur full stack chez Decathlon sur l'offre locale\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Déploiement: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Méthode: Agile Kanban\n\n[Juin - Décembre 2019] Ingénieur IT / support chez Decathlon sur l'offre et le plan\n  - Traitement des tickets de niveau 3 et analyse de bugs (code / base de données)\n  - Tests fonctionnels et mise en production\n  - Écriture de scripts SQL (extraction, correction de bug)\n  - Mise en place d'un rapport mensuel automatisé sur l'activité du support\n  - Développement d'une application de monitoring en direct sur les tickets (Angular 8 / Node.js)\n\n[Mars - Mai 2019] Pôle Innovation de Sogeti sur le projet DivaTrade:\n    Développement full stack avec JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertification Microsoft Azure AZ-900",
+          "subtitle": "Sogeti\nMars 2019 - Août 2022 (3 ans 6 mois)\nLille, Hauts-de-France, France",
+          "title": "Consultant Application"
+        },
+        "content-6": {
+          "avatar-path": "/resume-logos/decathlon.jpg",
+          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDéploiement: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMéthode: Agile Kanban",
+          "subtitle": "Decathlon - Freelance\nAoût 2022 - Mars 2025 (2 ans 8 mois)\nLille, Hauts-de-France, France",
+          "title": "Développeur full stack dans l'équipe offre - Freelance"
+        },
+        "heading": "Expérience"
+      },
       "file-name": "CV.pdf"
     },
     "toolbar-date-time": {
@@ -205,6 +277,78 @@
     },
     "resume-pdf": {
       "app-title": "PDF Reader - currículum.pdf",
+      "education": {
+        "content-1": {
+          "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
+          "content": "Engineering Sciences option\nGrade: mention \"Well\"",
+          "subtitle": "Saint Rémi High School, Roubaix\n2010 - 2012",
+          "title": "High school diploma of Science"
+        },
+        "content-2": {
+          "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
+          "content": "MP course (Mathematics and Physics)",
+          "subtitle": "Saint Rémi High School, Roubaix\n2012 - 2014",
+          "title": "Preparatory Class for Engineering Schools"
+        },
+        "content-3": {
+          "avatar-path": "/resume-logos/lille-university.jpg",
+          "content": "Study of the main fields of Physics: electromagnetism, thermodynamics, optics, mechanics, electricity, special relativity, astronomy and waves.",
+          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015",
+          "title": "Bachelor's Degree (2nd year) - Physics"
+        },
+        "content-4": {
+          "avatar-path": "/resume-logos/lille-university.jpg",
+          "content": "Initiation to programming with C and assembler\nImage processing with ImageJ software\nDiscovery of I²C, Dali, SPI and DMX communication protocols\nElectronics, electrical engineering and thermal science\n\nProject: Measuring the snow depth with an Arduino board",
+          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016",
+          "title": "Bachelor's Degree (3rd year) - Electrical Engineering"
+        },
+        "content-5": {
+          "avatar-path": "/resume-logos/lille-university.jpg",
+          "content": "C / C ++ , Java and VBA programming languages\nRelational databases and SQL language\nWeb development in HTML, CSS and PHP\nMobile application development with WinDev software\nAnalysis of a home automation project to be done in KNX\n\nGrade: Honors\nTOEIC: 925",
+          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018",
+          "title": "Master's Degree - Industrial Computing and Automation"
+        },
+        "heading": "Formación"
+      },
+      "experience": {
+        "content-1": {
+          "avatar-path": "/resume-logos/eolane.jpg",
+          "content": "Soldering of electronic components (resistors / capacitors)\nSetting beacons with a network analyzer",
+          "subtitle": "éolane\nJun 2016 - Jul 2016 (2 meses)\nRoncq, Hauts-de-France, France",
+          "title": "Electronics Technician"
+        },
+        "content-2": {
+          "avatar-path": "/resume-logos/ad-industries.jpg",
+          "content": "VBA development for automated data processing in Excel\nDevelopment of scripts (VBS and batch) to automate IT actions",
+          "subtitle": "MS Composites (AD Industries)\nMay 2017 - Jul 2017 (3 meses)\nLiévin, Hauts-de-France, France",
+          "title": "VBA developer intern"
+        },
+        "content-3": {
+          "avatar-path": "/resume-logos/indelec.jpg",
+          "content": "Realization of an image processing to isolate an electric arc on a photo\nDefinition of a method for calculating the coordinates of the points of this electric arc\nReconstitution and schematization of the trajectory of the electric arc in 3D\nDevelopment of a Java application to automate these tasks",
+          "subtitle": "Indelec\nApr 2018 - Sep 2018 (6 meses)\nDouai, Hauts-de-France, France",
+          "title": "Java developer intern - R&D team"
+        },
+        "content-4": {
+          "avatar-path": "/resume-logos/m2i-formation.jpg",
+          "content": "Front: HTML, CSS and Javascript / frameworks JQuery, Node.js, Angular 7 and ReactJS\nBack: Java EE, Servlets & JSP, architecture MVC, frameworks Struts and Spring\nRelational databases with SQL, JDBC and Hibernate\n\nTeam project \"smartshop\":\ncreate an online sales site with user login, product list display, cart management and order completion.",
+          "subtitle": "M2i Formation\nJan 2019 - Mar 2019 (3 meses)\nVilleneuve d'Ascq, Hauts-de-France, France",
+          "title": "Trainee in full stack web development"
+        },
+        "content-5": {
+          "avatar-path": "/resume-logos/sogeti.jpg",
+          "content": "[January 2020 - August 2022] Full stack developer at Decathlon in local offer team\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Deployment: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Method: Agile Kanban\n\n[June - December 2019] IT engineer / support engineer at Decathlon in offer and plan teams\n  - Level 3 requests resolution and bug analysis (code / database)\n  - Functional tests and production deployment\n  - Writing SQL scripts (extraction, bug correction)\n  - Creation of a monthly automated reporting on the support activity\n  - Development of a live monitoring application on the support requests (Angular 8 / Node.js)\n\n[March 2019 - May 2019] Innovation Centre at Sogeti on DivaTrade project:\n    Full stack development with JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertification Microsoft Azure AZ-900",
+          "subtitle": "Sogeti\nMar 2019 - Aug 2022 (3 años 6 meses)\nLille Area, Hauts-de-France, France",
+          "title": "Applications Consultant"
+        },
+        "content-6": {
+          "avatar-path": "/resume-logos/decathlon.jpg",
+          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
+          "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 años 8 meses)\nLille Area, Hauts-de-France, France",
+          "title": "Full stack developer at offer team - Freelance"
+        },
+        "heading": "Experiencia"
+      },
       "file-name": "currículum.pdf"
     },
     "toolbar-date-time": {
