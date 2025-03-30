@@ -89,7 +89,7 @@
         },
         "content-4": {
           "avatar-path": "/resume-logos/m2i-formation.jpg",
-          "content": "Front: HTML, CSS and Javascript / frameworks JQuery, Node.js, Angular 7 and ReactJS\nBack: Java EE, Servlets & JSP, architecture MVC, frameworks Struts and Spring\nRelational databases with SQL, JDBC and Hibernate\n\nTeam project \"smartshop\":\ncreate an online sales site with user login, product list display, cart management and order completion.",
+          "content": "Front: HTML, CSS and Javascript / frameworks JQuery, Angular 7 and ReactJS\nBack: Java, Servlets & JSP, architecture MVC, frameworks Struts, Spring and Node.js\nRelational databases with SQL, JDBC and Hibernate\n\nTeam project \"smartshop\":\ncreate an online sales site with user login, product list display, cart management and order completion.",
           "subtitle": "M2i Formation\nJan 2019 - Mar 2019 (3 mos)\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Trainee in full stack web development"
         },
@@ -210,7 +210,7 @@
         },
         "content-4": {
           "avatar-path": "/resume-logos/m2i-formation.jpg",
-          "content": "Front : HTML, CSS et Javascript / frameworks JQuery, Node.js, Angular 7 et ReactJS\nBack : Java EE, Servlets & JSP, architecture MVC, frameworks Struts et Spring\nBases de données relationnelles avec SQL, JDBC et Hibernate\n\nProjet de groupe \"smartshop\":\nréaliser un site de vente en ligne avec la connexion des utilisateurs, l'affichage de la liste des produits, la gestion du panier et la finalisation de la commande.",
+          "content": "Front : HTML, CSS et Javascript / frameworks JQuery, Angular 7 et ReactJS\nBack : Java, Servlets & JSP, architecture MVC, frameworks Struts, Spring et Node.js\nBases de données relationnelles avec SQL, JDBC et Hibernate\n\nProjet de groupe \"smartshop\":\nréaliser un site de vente en ligne avec la connexion des utilisateurs, l'affichage de la liste des produits, la gestion du panier et la finalisation de la commande.",
           "subtitle": "M2i Formation\nJanvier 2019 - Mars 2019 (3 mois)\nVilleneuve d'Ascq, Hauts-de-France, France",
           "title": "Stagiaire en développement web full stack"
         },
@@ -280,72 +280,72 @@
       "education": {
         "content-1": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
-          "content": "Engineering Sciences option\nGrade: mention \"Well\"",
-          "subtitle": "Saint Rémi High School\n2010 - 2012\nRoubaix, Hauts-de-France, France",
-          "title": "High school diploma of Science"
+          "content": "Opción Ciencias de la Ingeniería\nNota: Notable",
+          "subtitle": "Instituto Saint Rémi\n2010 - 2012\nRoubaix, Alta Francia, Francia",
+          "title": "Bachillerato en Ciencias"
         },
         "content-2": {
           "avatar-path": "/resume-logos/lycee-saint-remi.jpg",
-          "content": "MP course (Mathematics and Physics)",
-          "subtitle": "Saint Rémi High School\n2012 - 2014\nRoubaix, Hauts-de-France, France",
-          "title": "Preparatory Class for Engineering Schools"
+          "content": "Curso MP (Matemáticas y Física)",
+          "subtitle": "Instituto Saint Rémi\n2012 - 2014\nRoubaix, Alta Francia, Francia",
+          "title": "Clase Preparatoria para Escuelas de Ingeniería"
         },
         "content-3": {
           "avatar-path": "/resume-logos/lille-university.jpg",
-          "content": "Study of the main fields of Physics: electromagnetism, thermodynamics, optics, mechanics, electricity, special relativity, astronomy and waves.",
-          "subtitle": "Lille University of Sciences and Technologies\n2014 - 2015\nVilleneuve d'Ascq, Hauts-de-France, France",
-          "title": "Bachelor's Degree (2nd year) - Physics"
+          "content": "Estudio de los principales campos de la Física: electromagnetismo, termodinámica, óptica, mecánica, electricidad, relatividad especial, astronomía y ondas.",
+          "subtitle": "Universidad de Ciencias y Tecnologías de Lille\n2014 - 2015\nVilleneuve d'Ascq, Alta Francia, Francia",
+          "title": "Licencia (2do año) - Física"
         },
         "content-4": {
           "avatar-path": "/resume-logos/lille-university.jpg",
-          "content": "Initiation to programming with C and assembler\nImage processing with ImageJ software\nDiscovery of I²C, Dali, SPI and DMX communication protocols\nElectronics, electrical engineering and thermal science\n\nProject: Measuring the snow depth with an Arduino board",
-          "subtitle": "Lille University of Sciences and Technologies\n2015 - 2016\nVilleneuve d'Ascq, Hauts-de-France, France",
-          "title": "Bachelor's Degree (3rd year) - Electrical Engineering"
+          "content": "Iniciación a la programación con C y assembler\nProcesamiento de imágenes con la programa ImageJ\nDescubrimiento de los protocolos de comunicación I²C, Dali, SPI y DMX\nElectrónica, ingeniería eléctrica y ciencia térmica\n\nProyecto: Medición de la profundidad de la nieve con una placa Arduino",
+          "subtitle": "Universidad de Ciencias y Tecnologías de Lille\n2015 - 2016\nVilleneuve d'Ascq, Alta Francia, Francia",
+          "title": "Licencia (3er año) - Electrotecnia"
         },
         "content-5": {
           "avatar-path": "/resume-logos/lille-university.jpg",
-          "content": "C / C ++ , Java and VBA programming languages\nRelational databases and SQL language\nWeb development in HTML, CSS and PHP\nMobile application development with WinDev software\nAnalysis of a home automation project to be done in KNX\n\nGrade: Honors\nTOEIC: 925",
-          "subtitle": "Lille University of Sciences and Technologies\n2016 - 2018\nVilleneuve d'Ascq, Hauts-de-France, France",
-          "title": "Master's Degree - Industrial Computing and Automation"
+          "content": "Lenguajes de programación C / C ++ , Java and VBA\nBases de datos relacionales y lenguaje SQL\nDesarrollo web en HTML, CSS y PHP\nDesarrollo de aplicaciones móviles con la programa WinDev\nAnálisis de un proyecto domótico a realizar en KNX\n\nNota: Sobresaliente\nTOEIC: 925",
+          "subtitle": "Universidad de Ciencias y Tecnologías de Lille\n2016 - 2018\nVilleneuve d'Ascq, Alta Francia, Francia",
+          "title": "Máster - Computación industrial y automatización"
         },
         "heading": "Formación"
       },
       "experience": {
         "content-1": {
           "avatar-path": "/resume-logos/eolane.jpg",
-          "content": "Soldering of electronic components (resistors / capacitors)\nSetting beacons with a network analyzer",
-          "subtitle": "éolane\nJun 2016 - Jul 2016 (2 meses)\nRoncq, Hauts-de-France, France",
+          "content": "Soldadura de componentes electrónicos (resistencias/condensadores)\nEstablecimiento de balizas con un analizador de red",
+          "subtitle": "éolane\nJunio 2016 - Julio 2016 (2 meses)\nRoncq, Alta Francia, Francia",
           "title": "Electronics Technician"
         },
         "content-2": {
           "avatar-path": "/resume-logos/ad-industries.jpg",
-          "content": "VBA development for automated data processing in Excel\nDevelopment of scripts (VBS and batch) to automate IT actions",
-          "subtitle": "MS Composites (AD Industries)\nMay 2017 - Jul 2017 (3 meses)\nLiévin, Hauts-de-France, France",
-          "title": "VBA developer intern"
+          "content": "Desarrollo de VBA para el procesamiento automatizado de datos en Excel.\nDesarrollo de scripts (VBS y batch) para automatizar acciones de IT.",
+          "subtitle": "MS Composites (AD Industries)\nMayo 2017 - Julio 2017 (3 meses)\nLiévin, Alta Francia, Francia",
+          "title": "Pasante desarrollador VBA"
         },
         "content-3": {
           "avatar-path": "/resume-logos/indelec.jpg",
-          "content": "Realization of an image processing to isolate an electric arc on a photo\nDefinition of a method for calculating the coordinates of the points of this electric arc\nReconstitution and schematization of the trajectory of the electric arc in 3D\nDevelopment of a Java application to automate these tasks",
-          "subtitle": "Indelec\nApr 2018 - Sep 2018 (6 meses)\nDouai, Hauts-de-France, France",
-          "title": "Java developer intern - R&D team"
+          "content": "Realización de un procesamiento de imagen para aislar un arco eléctrico en una fotografía\nDefinición de un método para calcular las coordenadas de los puntos de este arco eléctrico\nReconstitución y esquematización de la trayectoria del arco eléctrico en 3D\nDesarrollo de una aplicación Java para automatizar estas tareas",
+          "subtitle": "Indelec\nAbril 2018 - Septiembre 2018 (6 meses)\nDouai, Alta Francia, Francia",
+          "title": "Pasante desarrollador Java - Departamento de I+D"
         },
         "content-4": {
           "avatar-path": "/resume-logos/m2i-formation.jpg",
-          "content": "Front: HTML, CSS and Javascript / frameworks JQuery, Node.js, Angular 7 and ReactJS\nBack: Java EE, Servlets & JSP, architecture MVC, frameworks Struts and Spring\nRelational databases with SQL, JDBC and Hibernate\n\nTeam project \"smartshop\":\ncreate an online sales site with user login, product list display, cart management and order completion.",
-          "subtitle": "M2i Formation\nJan 2019 - Mar 2019 (3 meses)\nVilleneuve d'Ascq, Hauts-de-France, France",
-          "title": "Trainee in full stack web development"
+          "content": "Front: HTML, CSS y Javascript / frameworks JQuery, Angular 7 y ReactJS\nBack: Java, Servlets & JSP, architecture MVC, frameworks Struts, Spring y Node.js\nBases de datos relacionales con SQL, JDBC e Hibernate\n\nProyecto de equipo \"smartshop\":\ncrear un sitio de ventas en línea con inicio de sesión de usuario, visualización de lista de productos, gestión de carrito y finalización de pedidos.",
+          "subtitle": "M2i Formation\nEnero 2019 - Marzo 2019 (3 meses)\nVilleneuve d'Ascq, Alta Francia, Francia",
+          "title": "Pasante en desarrollo web full stack"
         },
         "content-5": {
           "avatar-path": "/resume-logos/sogeti.jpg",
-          "content": "[January 2020 - August 2022] Full stack developer at Decathlon in local offer team\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Deployment: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Method: Agile Kanban\n\n[June - December 2019] IT engineer / support engineer at Decathlon in offer and plan teams\n  - Level 3 requests resolution and bug analysis (code / database)\n  - Functional tests and production deployment\n  - Writing SQL scripts (extraction, bug correction)\n  - Creation of a monthly automated reporting on the support activity\n  - Development of a live monitoring application on the support requests (Angular 8 / Node.js)\n\n[March 2019 - May 2019] Innovation Centre at Sogeti on DivaTrade project:\n    Full stack development with JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertification Microsoft Azure AZ-900",
-          "subtitle": "Sogeti\nMar 2019 - Aug 2022 (3 años 6 meses)\nLille Area, Hauts-de-France, France",
-          "title": "Applications Consultant"
+          "content": "[Enero 2020 - Agosto 2022] Desarrollador full stack en Decathlon en el equipo de la oferta local\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Despliegue: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Método: Ágil Kanban\n\n[Junio - Diciembre 2019] Ingeniero de IT / Ingeniero de soporte en Decathlon en el equipo de la oferta local\n  - Resolución de solicitudes de nivel 3 y análisis de errores (código / base de datos)\n  - Pruebas funcionales y despliegue de producción\n  - Escritura de scripts SQL (extracción, corrección de errores)\n  - Creación de un informe automatizado mensual sobre la actividad de soporte\n  - Desarrollo de una aplicación de monitoreo en vivo de las solicitudes de soporte (Angular 8 / Node.js)\n\n[Marzo 2019 - Mayo 2019] Centro de Innovación de Sogeti sobre el proyecto DivaTrade:\n    Desarrollo full stack con JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertificación Microsoft Azure AZ-900",
+          "subtitle": "Sogeti\nMarzo 2019 - Agosto 2022 (3 años 6 meses)\nLille Area, Alta Francia, Francia",
+          "title": "Consultor de aplicaciones"
         },
         "content-6": {
           "avatar-path": "/resume-logos/decathlon.jpg",
-          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
-          "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 años 8 meses)\nLille Area, Hauts-de-France, France",
-          "title": "Full stack developer at offer team"
+          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nDatos: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDespliegue: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMétodo: Ágil Kanban",
+          "subtitle": "Decathlon - Freelance\nAgosto 2022 - Marzo 2025 (2 años 8 meses)\nLille Area, Alta Francia, Francia",
+          "title": "Desarrollador full stack en el equipo de la oferta"
         },
         "heading": "Experiencia"
       },
