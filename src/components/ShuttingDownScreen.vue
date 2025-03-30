@@ -30,7 +30,7 @@ onMounted(() => shutdown())
     class="loader"
     size="100px"
     label-class="q-pa-sm"
-    :label="t('shutdown.shutting-down')"
+    :label="t('global.shutting-down')"
   />
 </template>
 
