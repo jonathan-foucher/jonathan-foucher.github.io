@@ -96,13 +96,13 @@
         "content-5": {
           "avatar-path": "/resume-logos/sogeti.jpg",
           "content": "[January 2020 - August 2022] Full stack developer at Decathlon in local offer team\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Deployment: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Method: Agile Kanban\n\n[June - December 2019] IT engineer / support engineer at Decathlon in offer and plan teams\n  - Level 3 requests resolution and bug analysis (code / database)\n  - Functional tests and production deployment\n  - Writing SQL scripts (extraction, bug correction)\n  - Creation of a monthly automated reporting on the support activity\n  - Development of a live monitoring application on the support requests (Angular 8 / Node.js)\n\n[March 2019 - May 2019] Innovation Centre at Sogeti on DivaTrade project:\n    Full stack development with JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertification Microsoft Azure AZ-900",
-          "subtitle": "Sogeti\nMar 2019 - Aug 2022 (3 yrs 6 mos)\nLille Area, Hauts-de-France, France",
+          "subtitle": "Sogeti\nMar 2019 - Aug 2022 (3 yrs 6 mos)\nLille, Hauts-de-France, France",
           "title": "Applications Consultant"
         },
         "content-6": {
           "avatar-path": "/resume-logos/decathlon.jpg",
           "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
-          "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 yrs 8 mos)\nLille Area, Hauts-de-France, France",
+          "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 yrs 8 mos)\nLille, Hauts-de-France, France",
           "title": "Full stack developer at offer team"
         },
         "heading": "Experience"
@@ -304,7 +304,7 @@
         },
         "content-5": {
           "avatar-path": "/resume-logos/lille-university.jpg",
-          "content": "Lenguajes de programación C / C ++ , Java and VBA\nBases de datos relacionales y lenguaje SQL\nDesarrollo web en HTML, CSS y PHP\nDesarrollo de aplicaciones móviles con la programa WinDev\nAnálisis de un proyecto domótico a realizar en KNX\n\nNota: Sobresaliente\nTOEIC: 925",
+          "content": "Lenguajes de programación C / C ++ , Java y VBA\nBases de datos relacionales y lenguaje SQL\nDesarrollo web en HTML, CSS y PHP\nDesarrollo de aplicaciones móviles con la programa WinDev\nAnálisis de un proyecto domótico a realizar en KNX\n\nNota: Sobresaliente\nTOEIC: 925",
           "subtitle": "Universidad de Ciencias y Tecnologías de Lille\n2016 - 2018\nVilleneuve d'Ascq, Alta Francia, Francia",
           "title": "Máster - Computación industrial y automatización"
         },
@@ -338,13 +338,13 @@
         "content-5": {
           "avatar-path": "/resume-logos/sogeti.jpg",
           "content": "[Enero 2020 - Agosto 2022] Desarrollador full stack en Decathlon en el equipo de la oferta local\n    Back: Java, Maven, Spring Boot, Hibernate, SQL, JUnit, Docker, Kafka, Talend, Postman\n    Front: Vue.js, Angular 8, Cypress, Cucumber\n    Despliegue: git, Github, PostgreSQL, Jenkins, Sonar, Kubernetes, Google Cloud Platform, bash\n    Método: Ágil Kanban\n\n[Junio - Diciembre 2019] Ingeniero de IT / Ingeniero de soporte en Decathlon en el equipo de la oferta local\n  - Resolución de solicitudes de nivel 3 y análisis de errores (código / base de datos)\n  - Pruebas funcionales y despliegue de producción\n  - Escritura de scripts SQL (extracción, corrección de errores)\n  - Creación de un informe automatizado mensual sobre la actividad de soporte\n  - Desarrollo de una aplicación de monitoreo en vivo de las solicitudes de soporte (Angular 8 / Node.js)\n\n[Marzo 2019 - Mayo 2019] Centro de Innovación de Sogeti sobre el proyecto DivaTrade:\n    Desarrollo full stack con JHipster, Angular 7, Java, Spring Boot, Docker, Git\n\nCertificación Microsoft Azure AZ-900",
-          "subtitle": "Sogeti\nMarzo 2019 - Agosto 2022 (3 años 6 meses)\nLille Area, Alta Francia, Francia",
+          "subtitle": "Sogeti\nMarzo 2019 - Agosto 2022 (3 años 6 meses)\nLille, Alta Francia, Francia",
           "title": "Consultor de aplicaciones"
         },
         "content-6": {
           "avatar-path": "/resume-logos/decathlon.jpg",
           "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nDatos: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDespliegue: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMétodo: Ágil Kanban",
-          "subtitle": "Decathlon - Freelance\nAgosto 2022 - Marzo 2025 (2 años 8 meses)\nLille Area, Alta Francia, Francia",
+          "subtitle": "Decathlon - Freelance\nAgosto 2022 - Marzo 2025 (2 años 8 meses)\nLille, Alta Francia, Francia",
           "title": "Desarrollador full stack en el equipo de la oferta"
         },
         "heading": "Experiencia"
