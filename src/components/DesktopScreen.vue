@@ -59,16 +59,26 @@ const getKeyFromText = (text: string) => text.toLocaleLowerCase().replace(' ', '
 </script>
 
 <template>
-  <div class="row inline q-gutter-md q-pl-sm">
-    <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col q-gutter-y-xs">
-      <desktop-icon
-        v-for="desktopIcon in desktopIconsColumn"
-        :key="getKeyFromText(desktopIcon.text)"
-        class="row"
-        :desktop-icon="desktopIcon"
-      />
+  <div class="fit desktop-background">
+    <div class="row inline q-gutter-md q-pl-sm">
+      <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col q-gutter-y-xs">
+        <desktop-icon
+          v-for="desktopIcon in desktopIconsColumn"
+          :key="getKeyFromText(desktopIcon.text)"
+          class="row"
+          :desktop-icon="desktopIcon"
+        />
+      </div>
     </div>
   </div>
 
   <app-window v-for="app in openedApps" :key="getKeyFromText(app.name)" :application="app" />
 </template>
+
+<style scoped>
+.desktop-background {
+  background-image: linear-gradient(25deg, #0c8787, #554298 70%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+</style>

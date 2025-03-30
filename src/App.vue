@@ -16,24 +16,24 @@ const { isTurnedOn, isLoggedIn, isBootingUp, isShuttingDown } = storeToRefs(powe
 <template>
   <q-layout class="disable-select cursor-default">
     <q-page-container>
-      <q-page v-if="isBootingUp" class="booting-up-background">
+      <q-page v-if="isBootingUp" class="booting-up-background window-size">
         <booting-up-screen />
       </q-page>
 
-      <q-page v-else-if="isShuttingDown">
+      <q-page v-else-if="isShuttingDown" class="bg-primary window-size">
         <shutting-down-screen />
       </q-page>
 
-      <q-page v-else-if="isTurnedOn && !isLoggedIn" class="bg-primary">
+      <q-page v-else-if="isTurnedOn && !isLoggedIn" class="bg-primary window-size">
         <logging-in-screen />
       </q-page>
 
-      <q-page v-else-if="isTurnedOn" class="fit desktop-background">
+      <q-page v-else-if="isTurnedOn" class="window-size">
         <desktop-toolbar />
         <desktop-screen />
       </q-page>
 
-      <q-page v-else class="bg-black">
+      <q-page v-else class="bg-black window-size">
         <shutdown-screen />
       </q-page>
     </q-page-container>
@@ -79,11 +79,8 @@ body {
   background-color: $light-black;
 }
 
-.desktop-background {
-  background-image: linear-gradient(25deg, #0c8787, #554298 70%);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: calc(100vh - 40px);
+.window-size {
+  height: 100vh;
+  width: 100vw;
 }
 </style>
