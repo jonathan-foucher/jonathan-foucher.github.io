@@ -12,6 +12,11 @@ const { startShutdown } = powerStore
 
 const applicationStore = useApplicationStore()
 const { openApp } = applicationStore
+
+const shutdown = () => {
+  closeAllApps()
+  startShutdown()
+}
 </script>
 
 <template>
@@ -34,7 +39,7 @@ const { openApp } = applicationStore
           </div>
         </q-item>
 
-        <q-item dense class="q-pa-sm" clickable @click="startShutdown">
+        <q-item dense class="q-pa-sm" clickable @click="shutdown">
           <q-icon class="col-2" name="power_settings_new" color="negative" size="medium" />
           <span class="col-10 no-wrap q-pr-xl">
             {{ t('main-menu.shutdown') }}
