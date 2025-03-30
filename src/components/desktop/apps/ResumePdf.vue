@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const isEntryExisting = (index: number, type: string) =>
-  t(`resume-pdf.${type}-content-${index}.title`) !== `resume-pdf.${type}-content-${index}.title`
+  t(`resume-pdf.${type}.content-${index}.title`) !== `resume-pdf.${type}.content-${index}.title`
 
 const experienceIndexes = ref<Array<number>>([])
 const educationIndexes = ref<Array<number>>([])
@@ -29,36 +29,36 @@ onMounted(() => {
   <q-scroll-area class="fit">
     <q-timeline color="secondary" class="timeline q-px-xl">
       <q-timeline-entry heading>
-        {{ t(`resume-pdf.experience-heading`) }}
+        {{ t(`resume-pdf.experience.heading`) }}
       </q-timeline-entry>
       <q-timeline-entry
         v-for="index in experienceIndexes"
         :key="index"
         class="entry-item"
         color="green"
-        :title="t(`resume-pdf.experience-content-${index}.title`)"
-        :subtitle="t(`resume-pdf.experience-content-${index}.subtitle`)"
-        :avatar="t(`resume-pdf.experience-content-${index}.avatar-path`) || undefined"
+        :title="t(`resume-pdf.experience.content-${index}.title`)"
+        :subtitle="t(`resume-pdf.experience.content-${index}.subtitle`)"
+        :avatar="t(`resume-pdf.experience.content-${index}.avatar-path`) || undefined"
       >
         <div class="entry-content">
-          {{ t(`resume-pdf.experience-content-${index}.content`) }}
+          {{ t(`resume-pdf.experience.content-${index}.content`) }}
         </div>
       </q-timeline-entry>
 
       <q-timeline-entry heading>
-        {{ t(`resume-pdf.education-heading`) }}
+        {{ t(`resume-pdf.education.heading`) }}
       </q-timeline-entry>
       <q-timeline-entry
         v-for="index in educationIndexes"
         :key="index"
         class="entry-item"
         color="blue"
-        :title="t(`resume-pdf.education-content-${index}.title`)"
-        :subtitle="t(`resume-pdf.education-content-${index}.subtitle`)"
-        :avatar="t(`resume-pdf.education-content-${index}.avatar-path`) || undefined"
+        :title="t(`resume-pdf.education.content-${index}.title`)"
+        :subtitle="t(`resume-pdf.education.content-${index}.subtitle`)"
+        :avatar="t(`resume-pdf.education.content-${index}.avatar-path`) || undefined"
       >
         <div class="entry-content">
-          {{ t(`resume-pdf.education-content-${index}.content`) }}
+          {{ t(`resume-pdf.education.content-${index}.content`) }}
         </div>
       </q-timeline-entry>
     </q-timeline>
