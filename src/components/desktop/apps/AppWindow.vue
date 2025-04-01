@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, type PropType, ref, watch } from 'vue'
+import { computed, onMounted, type PropType, ref, watch } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useApplicationStore } from '@/stores/application.ts'
@@ -32,18 +32,25 @@ const showApp = ref<boolean>(true)
 
 const getInitialPosition = (size: number, appSize: number, minPosition: number): number => {
   const percentShift = 5
+  if (size <= appSize * ((2 * percentShift + 100) / 100)) {
+    return minPosition
+  }
+
   const random = Math.random() * (2 * percentShift + 1) - percentShift
   const centerPosition = (size - appSize) / 2
   const newPosition = centerPosition + Math.floor(random * (size / 100))
   return Math.max(newPosition, minPosition)
 }
 
+const windowWidth = computed(() => Math.min(application.width, document.body.offsetWidth))
+const windowHeight = computed(() => Math.min(application.height, document.body.offsetHeight))
+
 onMounted(async () => {
   playMouseClickSfx()
 
   windowPosition.value = [
-    getInitialPosition(document.body.offsetWidth, application.width, 0),
-    getInitialPosition(document.body.offsetHeight, application.height, APP_TOOLBAR_SIZE_PX),
+    getInitialPosition(document.body.offsetWidth, windowWidth.value, 0),
+    getInitialPosition(document.body.offsetHeight, windowHeight.value, APP_TOOLBAR_SIZE_PX),
   ]
 })
 
@@ -69,13 +76,13 @@ const moveWindow: TouchPanValue = (event) => {
         windowPosition.value[0],
         event.delta?.x ?? 0,
         0,
-        document.body.offsetWidth - application.width
+        document.body.offsetWidth - windowWidth.value
       ),
       getNewPositionValue(
         windowPosition.value[1],
         event.delta?.y ?? 0,
         APP_TOOLBAR_SIZE_PX,
-        document.body.offsetHeight - application.height
+        document.body.offsetHeight - windowHeight.value
       ),
     ]
   }
@@ -107,7 +114,7 @@ watch(requestsForClosing, (newValue) => {
       <q-card
         class="q-pa-none bg-grey-2 vertical-stretch"
         :class="isFullSize ? 'window-width window-height' : ''"
-        :style="isFullSize ? '' : `width: ${application.width}px; height: ${application.height}px`"
+        :style="isFullSize ? '' : `width: ${windowWidth}px; height: ${windowHeight}px`"
       >
         <q-bar
           dark
@@ -121,7 +128,9 @@ watch(requestsForClosing, (newValue) => {
 
           <div class="app-title col text-center text-weight-bold">{{ t(application.name) }}</div>
         </q-bar>
-        <component :is="application.component" />
+        <q-scroll-area class="fit">
+          <component :is="application.component" />
+        </q-scroll-area>
       </q-card>
     </q-page-sticky>
   </q-slide-transition>
