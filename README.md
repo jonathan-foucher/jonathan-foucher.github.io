@@ -1,7 +1,9 @@
 ## Introduction
+
 This project is my personal GitHub page, it is available at [this link](https://jonathan-foucher.github.io).
 
 ## Technical stack
+
 This project is built with Vue.js + Vite + Pinia in TypeScript and Quasar.
 
 <p align="center">
