@@ -28,7 +28,8 @@ import WifiIcon from '@/components/toolbar/icons/WifiIcon.vue'
 @import '@/quasar-variables.sass';
 
 .desktop-bar {
-  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
   background-color: $light-black;
 }
 </style>
