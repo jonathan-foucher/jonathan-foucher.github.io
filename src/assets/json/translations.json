@@ -13,6 +13,7 @@
       "plugged-in": "Plugged in"
     },
     "global": {
+      "disclaimer": "Hello,\nNo matter what happens here, do not worry.\nThis is just a simulation to introduce myself in an original way.\n\nI hope you enjoy it :)",
       "help": "Help",
       "shutting-down": "Shutting down...",
       "volume": "Volume"
@@ -134,6 +135,7 @@
       "plugged-in": "Branché"
     },
     "global": {
+      "disclaimer": "Bonjour,\nPeu importe ce qu'il arrive ici, ne paniquez pas.\nIl s'agit seulement d'une simulation pour me présenter de manière originale.\n\nJ'espère que ça vous plaira :)",
       "help": "Aide",
       "shutting-down": "Arrêt en cours...",
       "volume": "Volume"
@@ -255,6 +257,7 @@
       "plugged-in": "Enchufada"
     },
     "global": {
+      "disclaimer": "Hola,\nPase lo que pase aquí, no te asustes.\nEsto es solo una simulación para presentarme de una manera original.\n\nEspero que os guste :)",
       "help": "Ayuda",
       "shutting-down": "Apagando...",
       "volume": "Volumen"

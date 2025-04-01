@@ -30,7 +30,7 @@ const { LOCALES, updateSelectedLocale, getFlagClassFromLocale } = localeStore
 
 <style scoped>
 .selected-flag {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .flag {
