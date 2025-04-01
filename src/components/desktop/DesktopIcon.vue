@@ -20,7 +20,7 @@ const onDoubleClick = async (event: MouseEvent) => {
 </script>
 
 <template>
-  <div class="col desktop-icon" @click="onDoubleClick">
+  <div class="col desktop-icon" @click="onDoubleClick" @touchend="desktopIcon.action()">
     <div class="row q-pt-sm">
       <q-icon v-if="desktopIcon.isSourceIcon" :name="desktopIcon.source" size="60px" class="icon-color" />
       <q-img v-else :src="desktopIcon.source" width="60px" height="60px" />
