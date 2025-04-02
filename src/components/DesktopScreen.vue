@@ -20,7 +20,7 @@ const { GITHUB_PROFILE_URL, ROOT_ME_PROFILE_URL, LINKED_IN_PROFILE_URL, openInNe
 const desktopIcons: Array<Array<DesktopIconType>> = [
   [
     {
-      source: '/icons/linkedin.png',
+      source: '/icons/linkedin-black.png',
       isSourceIcon: false,
       text: 'redirect.linkedin',
       isOpenNewIcon: true,
