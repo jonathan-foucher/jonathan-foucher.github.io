@@ -1,7 +1,9 @@
 name: Build and deploy personal page
 
 on:
-  workflow_dispatch:
+  release:
+    types:
+      - published
 
 jobs:
   build:
