@@ -1,5 +1,5 @@
 name: Build and deploy personal page
-run-name: Build and deploy personal page - ${{ github.ref }}
+run-name: Build and deploy personal page - ${{ github.ref_name }}
 
 on:
   release:
