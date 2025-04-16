@@ -108,6 +108,7 @@ watch(requestsForClosing, (newValue) => {
       v-show="showApp"
       ref="windowRef"
       position="top-left"
+      class="z-max"
       :offset="isFullSize ? [0, APP_TOOLBAR_SIZE_PX] : windowPosition"
       @click="focusApp(application.name)"
     >

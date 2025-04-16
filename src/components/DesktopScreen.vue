@@ -66,8 +66,15 @@ onMounted(() => playLoginSfx())
 
 <template>
   <div class="fit desktop-background">
+    <div class="absolute-center background-image">
+      <q-img src="@/assets/images/computer-background.gif" />
+    </div>
     <div class="row inline q-gutter-md q-pl-sm">
-      <div v-for="(desktopIconsColumn, index) in desktopIcons" :key="`icons-column-${index}`" class="col q-gutter-y-xs">
+      <div
+        v-for="(desktopIconsColumn, index) in desktopIcons"
+        :key="`icons-column-${index}`"
+        class="desktop-icon col q-gutter-y-xs"
+      >
         <desktop-icon
           v-for="desktopIcon in desktopIconsColumn"
           :key="getKeyFromText(desktopIcon.text)"
@@ -82,9 +89,17 @@ onMounted(() => playLoginSfx())
 </template>
 
 <style scoped>
+.background-image {
+  width: 30%;
+}
+
 .desktop-background {
   background-image: linear-gradient(25deg, #0c8787, #554298 70%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.desktop-icon {
+  z-index: 1;
 }
 </style>
