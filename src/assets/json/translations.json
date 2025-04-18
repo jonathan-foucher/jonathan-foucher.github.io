@@ -102,7 +102,7 @@
         },
         "content-6": {
           "avatar-path": "/resume-logos/decathlon.jpg",
-          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
+          "content": "Implementation of new features on backend and frontend\nAnalysis and fix the bugs\nDesign on complex subjects\nPerformance improvements on the application and APIs\nMaintenance of the technical stack to the latest versions\nParticipation in application deployment\n\nBack: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDeployment: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMethod: Agile Kanban",
           "subtitle": "Decathlon - Freelance\nAug 2022 - Mar 2025 (2 yrs 8 mos)\nLille, Hauts-de-France, France",
           "title": "Full stack developer at offer team"
         },
@@ -224,7 +224,7 @@
         },
         "content-6": {
           "avatar-path": "/resume-logos/decathlon.jpg",
-          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDéploiement: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMéthode: Agile Kanban",
+          "content": "Réalisation de nouvelles fonctionnalités back et front\nAnalyse et correction de bugs\nConception sur les sujets complexes\nAmélioration des performances de l'application et des APIs\nMaintien à jour de la stack technique aux dernières versions\nParticipation au déploiement de l'application\n\nBack: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nData: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDéploiement: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMéthode: Agile Kanban",
           "subtitle": "Decathlon - Freelance\nAoût 2022 - Mars 2025 (2 ans 8 mois)\nLille, Hauts-de-France, France",
           "title": "Développeur full stack dans l'équipe offre"
         },
@@ -346,7 +346,7 @@
         },
         "content-6": {
           "avatar-path": "/resume-logos/decathlon.jpg",
-          "content": "Back: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nDatos: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDespliegue: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMétodo: Ágil Kanban",
+          "content": "Implementación de nuevas funcionalidades en backend y frontend\nAnálisis y corrección de errores\nDiseño en temas complejos\nMejoras de rendimiento en la aplicación y las API\nMantenimiento de la stack técnica a las últimas versiones\nParticipación en la implementación de la aplicación\n\nBack: Java, Spring Boot, Maven, JUnit, Sonar, Node.js\nFront: JavaScript, Vue.js, Vitest, Cypress\nDatos: SQL, Postgres, Kafka, Redis (cache / locks / stream), RabbitMQ\nDespliegue: git, GitHub, GitHub Actions, Docker, Kubernetes, Google Cloud Platform\nMétodo: Ágil Kanban",
           "subtitle": "Decathlon - Freelance\nAgosto 2022 - Marzo 2025 (2 años 8 meses)\nLille, Alta Francia, Francia",
           "title": "Desarrollador full stack en el equipo de la oferta"
         },
