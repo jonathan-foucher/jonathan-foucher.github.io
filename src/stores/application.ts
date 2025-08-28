@@ -32,7 +32,7 @@ export const useApplicationStore = defineStore('application', () => {
   }
 
   const isAppFocused = (name: string) =>
-    openedApps.value.length > 0 && openedApps.value[openedApps.value.length - 1].name === name
+    openedApps.value.length > 0 && openedApps.value[openedApps.value.length - 1]?.name === name
 
   const acceptClosingRequest = (name: string) =>
     (requestsForClosing.value = requestsForClosing.value.filter((appName) => appName !== name))
