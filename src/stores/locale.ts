@@ -8,7 +8,7 @@ export const useLocaleStore = defineStore('locale', () => {
   const i18n = useI18n()
   const { availableLocales, locale } = i18n
 
-  const selectedLocale = ref<string>(localStorage.getItem(LOCAL_STORAGE_KEY) ?? availableLocales[0])
+  const selectedLocale = ref<string>(localStorage.getItem(LOCAL_STORAGE_KEY) ?? availableLocales[0] ?? '')
   locale.value = selectedLocale.value
 
   const updateSelectedLocale = (newLocale: string): void => {
@@ -21,7 +21,7 @@ export const useLocaleStore = defineStore('locale', () => {
   }
 
   const getFlagClassFromLocale = (locale: string): string => {
-    const country: string = locale.split('-')[1]?.toLocaleLowerCase()
+    const country: string = locale.split('-')[1]?.toLocaleLowerCase() ?? ''
     return `fi fi-${country}`
   }
 

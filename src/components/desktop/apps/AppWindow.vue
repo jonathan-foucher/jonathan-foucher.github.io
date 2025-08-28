@@ -73,13 +73,13 @@ const moveWindow: TouchPanValue = (event) => {
 
     windowPosition.value = [
       getNewPositionValue(
-        windowPosition.value[0],
+        windowPosition.value[0] ?? 0,
         event.delta?.x ?? 0,
         0,
         document.body.offsetWidth - windowWidth.value
       ),
       getNewPositionValue(
-        windowPosition.value[1],
+        windowPosition.value[1] ?? 0,
         event.delta?.y ?? 0,
         APP_TOOLBAR_SIZE_PX,
         document.body.offsetHeight - windowHeight.value

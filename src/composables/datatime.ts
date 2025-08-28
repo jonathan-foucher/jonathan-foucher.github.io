@@ -50,11 +50,10 @@ export function useDateTime() {
   })
 
   const getCurrentTimeZoneOffset = (): string => {
-    return new Date()
-      .toLocaleString('en', { timeZone, timeZoneName: 'longOffset' })
-      .split(' ')
-      .reverse()[0]
-      .replace('GMT', 'UTC')
+    return (
+      new Date().toLocaleString('en', { timeZone, timeZoneName: 'longOffset' }).split(' ').reverse()[0] ??
+      ''.replace('GMT', 'UTC')
+    )
   }
 
   return { timeZone, formattedDateTime, getCurrentTimeZoneOffset }
